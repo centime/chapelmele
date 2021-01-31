@@ -1,0 +1,124 @@
+.nav-toggle
+	position: fixed
+	align-items: center
+	justify-content: space-between
+	z-index: 100
+	right: 0
+	top: 0
+	height: 70px
+	margin-bottom: 0
+	padding-left: 20px
+	padding-right: 20px
+	font-size: 14px
+	font-family: $raleway
+	text-transform: uppercase
+	
+	.menu,
+	.menu:before,
+	.menu:after
+		content: ""
+		position: relative
+		display: block
+		width: 23px
+		height: 2px
+		background-color: $black
+		
+	.menu:before
+		bottom: 7px
+		
+	.menu:after
+		top: 5px
+
+	#nav-panel-in
+		display: flex
+		width: 150px
+		height: 60px
+		border: 1px solid grey
+		z-index: 101
+		cursor: pointer
+		background-color: #ffffff63 !important
+		margin-top: 5px
+		div
+			display: flex
+			position: relative
+			top: 30px
+			left: 50px
+
+		.menu
+			margin-left: 20px
+		.menu2
+			position: relative
+			bottom: 10px
+
+
+#nav-panel-checkbox
+	display: none
+
+#nav-panel-checkbox:checked + header
+	display: flex
+	background-color: white!important
+
+#nav-panel-checkbox:checked + header *
+	display: flex
+	background-color: white!important
+	opacity: 1 !important	
+
+.nav
+	//visibility: hidden
+	//position: absolute
+	top: 75px
+	right: 0
+	display: flex
+	width: 100%
+	flex-direction: column
+	justify-content: center
+	margin: 0
+	padding: 0
+	list-style: none
+	background-color: white
+	border: 1px solid $black
+	border: 1px solid rgba(17,17,17,.15)
+	//opacity: 0
+	z-index: 10
+	transition: opacity .3s ease-in-out, visibility 0s .3s
+	display: none
+
+	ul
+		display: flex
+		flex-direction: row
+		width: 100%
+		padding: 0px
+		@media (max-width: 400px)
+			flex-direction: column
+
+	li
+		position: relative
+		width: 100%
+		text-align: center
+		border-bottom: 1px solid $black
+		border-bottom: 1px solid rgba(17,17,17,.15)
+		background-color: white
+		overflow: hidden
+		z-index: 10
+		
+			
+		&:hover
+			a
+				color: red
+
+		&:last-child
+			border-bottom: none
+	
+		a
+			display: block
+			width: 100%
+			height: 100%
+			padding: 5px 0
+			color: $black
+			font-size: 12px
+			font-family: $raleway
+			text-transform: uppercase
+			text-decoration: none
+			transition: color .2s ease-in-out
+			justify-content: center
+				

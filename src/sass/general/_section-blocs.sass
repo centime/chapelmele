@@ -1,0 +1,117 @@
+@mixin tile
+	display: flex
+	position: relative
+	width: 1440px
+	height: 600px
+	@media (max-width: 1200px)
+		height: inherit
+	max-width: 95%
+	margin: 30px auto
+	overflow: hidden
+	z-index: 10
+	top: 80vh
+	background-color: $transparent
+	@media (max-width: 768px)
+		margin: 15px auto
+	
+@mixin wrapper
+	display: flex
+	height: 100%
+	margin: 0
+	align-items: center
+	border-top: 1px solid rgba(255, 255, 255, 0.2)
+	box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.15)
+	background-color: $tile-bg
+
+section
+	@include tile
+
+	.wrapper
+		@include wrapper
+
+section.bloc-img-left
+	.wrapper
+		@media (max-width: 1200px)
+			flex-direction: column
+	.bloc-pic
+		order: 1
+		@media (max-width: 1200px)
+			order: 3
+	.bloc-text
+		order: 2
+
+
+section.bloc-img-right
+	.wrapper
+		@media (max-width: 1200px)
+			flex-direction: column
+	.bloc-pic
+		order: 2
+	.bloc-text
+		order: 1
+
+section
+	.bloc-pic
+		width: 45%
+		padding: 80px
+		@media (max-width: 1200px)
+			height: 250px
+			width: 250px
+			border-radius: 250px
+			overflow: hidden
+			padding: 0px
+			margin-bottom: 40px
+		img
+			width: 100%
+			@media (max-width: 1200px)
+				min-width: 250px
+				min-height: 250px
+				height: 100%
+				width: auto
+				position: relative
+				//right: 44%
+
+
+	.bloc-text
+		width: 45%
+		padding: 40px 80px 40px 80px
+		@media (max-width: 1200px)
+			width: 90%
+			padding: 20px
+		h2
+			margin-top: 0px
+
+	.placeholder
+		flex: 1 0 50%
+
+
+section.bloc-left 
+	@media (max-width: 1200px)
+		flex-direction: column
+	.bloc-text
+		width: 100%
+	.wrapper
+		width: 50%
+		@media (max-width: 1200px)
+			width: 100%
+			margin-bottom: 200px
+		order: 1
+	.placeholder
+		order: 2	
+		width: 50%
+
+section.bloc-right 
+	@media (max-width: 1200px)
+		flex-direction: column
+	.bloc-text
+		width: 100%
+	.wrapper
+		width: 50%
+		@media (max-width: 1200px)
+			width: 100%
+			margin-top: 200px
+		order: 2
+	.placeholder
+		order: 1
+
+

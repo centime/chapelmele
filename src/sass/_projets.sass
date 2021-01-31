@@ -1,0 +1,48 @@
+#petits-chatelets-presentation
+	.wrapper
+		display: flex
+		flex-direction: column
+		padding: 40px 80px 40px 80px
+		@media (max-width: 1200px)
+			padding: 20px
+		max-width: 100%
+
+		.bloc-text
+			width: 90%
+			display: flex
+			h2, p
+				width: 50%
+
+			@media (max-width: 1200px)
+				flex-direction: column
+				h2, p
+					width: 100%
+
+
+		ul
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			margin: 0
+			list-style: none
+			padding: 0
+			justify-content: center
+
+			li
+				margin: 0px 20px 0px 20px
+				@media (max-width: 1200px)
+					margin: 5px
+				h3
+					margin: 0px
+					text-align: center
+					@media (max-width: 1200px)
+						display: none
+				img
+					height: 150px
+					width: 150px
+					border-radius: 150px
+					overflow: hidden
+					max-width: 25vw
+					max-height: 25vw
+
+
