@@ -31,6 +31,8 @@ Build
 * sitemap.xml
 * RSS
 
+Clean up
+* remove jquery
 
 
 Run dev
@@ -40,3 +42,5 @@ Run dev
     ./dev.sh & ./bdev.sh &>/dev/null & ./dev.sh
 
 Should be running on localhost:8000, with src/sass and src/html being built continuously
+
+DO NOT edit css files directly, or html outside of /src/
