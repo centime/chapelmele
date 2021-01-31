@@ -25,6 +25,7 @@ Gallery
 Build
 * it's shitty, but it works
 * every page get the same metas (title, description, canonical etc) for now, to be revised later
+* gh-build is a dirty fix that won't be needed as soon as there's a proper domain name
 
 "Backend"
 * sitemap.xml
