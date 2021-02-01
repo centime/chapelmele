@@ -372,6 +372,17 @@ section {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.15);
     background-color: #efefef; }
+  section .bloc-link {
+    width: 200px;
+    border: 1px solid gray;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    font-family: "Raleway", Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: black;
+    background-color: white; }
 
 @media (max-width: 1200px) {
   section.bloc-img-left .wrapper {
