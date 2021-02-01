@@ -33,6 +33,45 @@ footer
 		width: 20%
 		padding: 60px
 
+	#cookies-notice
+		position: absolute
+		z-index: 101
+		bottom: 10px
+		border: 1px solid grey
+		background-color: white
+		left: 10px
+		width: 250px
+		display: flex-warp
+		padding: 5px
+		border-radius: 8px
+
+		* 
+			font-family: "Raleway", Helvetica, sans-serif
+		p
+			width: 100%
+			text-align: center
+			margin: 0
+			line-height: 1em
+			text-transform: uppercase
+			a
+				display: block
+				text-align: center
+				line-height: 0.8em
+				font-size: 12px
+				margin-bottom: 5px
+		button
+			width: 50%
+			line-height: 1em
+			text-transform: uppercase
+			border-radius: 8px
+
+			&.accept
+				border: 3px solid green
+			&.refuse
+				border: 3px solid red
+
+
+
 	.credit
 		position: absolute
 		z-index: 100

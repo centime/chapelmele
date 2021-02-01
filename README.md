@@ -38,7 +38,7 @@ Clean up
 Run dev
 =======
 
-    cd chapelemele-website
+    cd chapelemele
     ./dev.sh & ./bdev.sh &>/dev/null & ./dev.sh
 
 Should be running on localhost:8000, with src/sass and src/html being built continuously

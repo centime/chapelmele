@@ -15,11 +15,21 @@
               <li>Velit esse cillum dolore eu fugiat</li>
             </ul>
         </div>
+        <div id="cookies-notice">
+          <p>Ce site n'utilise aucun cookie de navigation <a href="#cookies-notice" onclick="document.querySelector('#cookies-notice a').style.visibility = 'hidden'">afficher la liste complète</a>
+          </p>
+          <button class="accept" onclick="saveCookieNotice()">Tout accepter</button><button class="refuse" onclick="saveCookieNotice()">Ne rien refuser</button>
+          <script type="text/javascript">
+            function updtCookiesNotice(){window.localStorage?localStorage.cookie?document.querySelector('#cookies-notice').style.display = 'none':0:0;}
+            function saveCookieNotice(){window.localStorage?localStorage.cookie?0:localStorage.cookie=true:0;updtCookiesNotice()}
+            updtCookiesNotice();
+          </script>
+        </div>
         <p class="credit"><a href="http://centime.fr">Vincent Delaunay</a>, 2021</p>
       </div>
     </footer>
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/parallax-hero.js"></script>
-    <script>(''+window.location).indexOf('/programmation/')>0 ? document.write('<script src="/static/js/fullCalendar.js"><\/script><script src="/static/js/progCalendar.js"><\/script><\/script><script src="/static/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/static/css/fullCalendar.css">') : ''</script>
+    <script>(''+window.location).indexOf('/programmation/')>0 ? document.write('<script src="/static/js/fullCalendar.js"><\/script><script src="/static/js/progCalendar.js"><\/script><\/script><script src="/static/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/static/css/fullCalendar.css">') : 0</script>
   </body>
 </html>
