@@ -302,6 +302,12 @@ body {
       #hero h1 {
         font-size: 40vh;
         margin: 20vh auto 0; } }
+    #hero h1.long-h1 {
+      margin: 10vh auto !important;
+      font-size: 30vh !important; }
+      @media (max-width: 1000px) {
+        #hero h1.long-h1 {
+          font-size: 20vh !important; } }
 
 #hero2 {
   position: fixed;
@@ -725,11 +731,11 @@ footer {
     #three-slide {
       height: 50vw; } }
 
-h1 {
+#presentation-h1 {
   margin: 10vh auto !important;
   font-size: 30vh !important; }
   @media (max-width: 1000px) {
-    h1 {
+    #presentation-h1 {
       font-size: 20vh !important; } }
 
 #petits-chatelets-presentation .wrapper {
