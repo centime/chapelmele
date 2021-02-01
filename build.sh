@@ -5,7 +5,7 @@ cat head.html home.html foot.html > ../../index.html &&
 
 cd pages &&
 
-for FILE in *.html; do 
+for FILE in `find . -iname "*.html"`; do 
   PAGE=`echo "$FILE" | sed -s "s/\.html$//"` &&
   echo "$FILE...";
   echo "-> ../../../$PAGE/index.html";

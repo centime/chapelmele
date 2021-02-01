@@ -10,7 +10,7 @@ cat head.html home.html foot.html | sed -s "s/href=\"\//href=\"\/chapelmele\//g"
 
 cd pages &&
 
-for FILE in *.html; do 
+for FILE in `find . -iname "*.html"`; do 
   PAGE=`echo "$FILE" | sed -s "s/\.html$//"` &&
   echo "$FILE...";
   echo "-> ../../../$PAGE/index.html";
