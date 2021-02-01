@@ -27,6 +27,9 @@ Build
 * every page get the same metas (title, description, canonical etc) for now, to be revised later
 * gh-build is a dirty fix that won't be needed as soon as there's a proper domain name
 
+Admin
+* current csv <-> json is beyond broken and nothing more than a quick PoC
+
 "Backend"
 * sitemap.xml
 * RSS

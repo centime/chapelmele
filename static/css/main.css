@@ -731,13 +731,6 @@ footer {
     #three-slide {
       height: 50vw; } }
 
-#presentation-h1 {
-  margin: 10vh auto !important;
-  font-size: 30vh !important; }
-  @media (max-width: 1000px) {
-    #presentation-h1 {
-      font-size: 20vh !important; } }
-
 #petits-chatelets-presentation .wrapper {
   display: flex;
   flex-direction: column;
