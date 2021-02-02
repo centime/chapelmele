@@ -8,13 +8,14 @@ Residence: France
 Editeur: Pierre Fourmeau
 					
 /* THANKS */							
-Tout le monde aux Petits Chatelets
+Tout le monde aux Petits Châtelets
                             
 /* SITE */
 Tech stack: Custom static       
-Software: Sass
+Source: github.com/centime/chapelmele
+Software: Sass, bash
 Hosting: Github
-   
+
                         
 
 

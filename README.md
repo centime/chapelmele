@@ -3,10 +3,13 @@ Todos
 
 Content
 * obv. Lorem ipsums
-* logos ?
-* images cropping
-* social widgets ?
 * meta titles/desc
+* images cropping
+* favicon
+* logos ?
+* social widgets ?
+* a/img alt/title
+* OSM layer
 
 Responsive
 * media queries breakpoints are 100% random for now, some cleaning to do
@@ -44,12 +47,11 @@ Admin
 * RSS
 * ld-json
 * open graph
-* robots.txt
+* canonicals
 
 Clean up
 * images compression
 * lazy load
-* a/img alt/title
 * graceful degradation
 * prefetch
 * critical css
