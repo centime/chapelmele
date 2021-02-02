@@ -603,6 +603,8 @@ header {
     padding-right: 180px;
     padding-left: 180px;
     display: block !important; }
+    header #header-title.coming-soon {
+      opacity: 1 !important; }
 
 footer {
   position: relative;
