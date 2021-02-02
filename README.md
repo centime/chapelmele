@@ -3,7 +3,6 @@ Todos
 
 Content
 * obv. Lorem ipsums
-* meta titles/desc
 * images cropping
 * favicon
 * logos ?
@@ -52,7 +51,6 @@ Admin
 * RSS
 * ld-json
 * open graph
-* canonicals
 
 Clean up
 * images compression
