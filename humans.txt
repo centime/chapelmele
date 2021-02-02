@@ -1,0 +1,21 @@
+/* TEAM */           
+Dev: Vincent Delaunay         
+Site: centime.fr
+Email: quelques.centimes@gmail.com
+Reddit: reddit.com/u/centime           
+Residence: France
+
+Editeur: Pierre Fourmeau
+					
+/* THANKS */							
+Tout le monde aux Petits Chatelets
+                            
+/* SITE */
+Tech stack: Custom static       
+Software: Sass
+Hosting: Github
+   
+                        
+
+
+                
