@@ -3,21 +3,27 @@ Todos
 
 Content
 * obv. Lorem ipsums
-* images compression
+* logos ?
 * images cropping
-* a/img alt/title
+* social widgets ?
+* meta titles/desc
 
 Responsive
 * media queries breakpoints are 100% random for now, some cleaning to do
 * h1 titles need finer re-sizing
 
 Design
-* add parallax to .hera pics
-* then fix #hero2 bullshit on homepage
+* prevent pics distorsion
+* add parallax to .hera pics?
 
-Calendar
+Agendas
 * interactive events.json generator
 * rich event description display
+* prog/ateliers/dispos
+* concerts/spectacles/expos/repas ?
+* besoin de bénévoles ?
+* private ?
+
 
 Gallery
 * bxslider ?
@@ -29,19 +35,32 @@ Build
 
 Admin
 * current csv <-> json is beyond broken and nothing more than a quick PoC
+* cache buster
+* agenda(s)
 
 "Backend"
-* sitemap.xml
+* sitemap.xml full urls
+* sitemap.xml relevant lastmods
 * RSS
+* ld-json
+* open graph
+* robots.txt
 
 Clean up
+* images compression
+* lazy load
+* a/img alt/title
+* graceful degradation
+* prefetch
+* critical css
+* fix #hero2 bullshit on homepage
 * remove jquery
 
 
 Run dev
 =======
 
-    cd chapelemele
+    cd chapelmele
     ./dev.sh & ./bdev.sh &>/dev/null & ./dev.sh
 
 Should be running on localhost:8000, with src/sass and src/html being built continuously
