@@ -302,13 +302,14 @@ body {
     font-family: "IntriqueScript", serif;
     font-weight: 200;
     max-width: 100%;
-    text-decoration: underline; }
+    text-decoration: underline;
+    line-height: 0.8em; }
     @media screen and (min-width: 900px) {
       #hero h1 {
         font-size: 40vh;
         margin: 20vh auto 0; } }
     #hero h1.long-h1 {
-      margin: 10vh auto !important;
+      margin: 15vh auto !important;
       font-size: 30vh !important; }
       @media (max-width: 1000px) {
         #hero h1.long-h1 {

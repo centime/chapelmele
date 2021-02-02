@@ -10,6 +10,11 @@ Content
 * a/img alt/title
 * OSM layer
 
+Urls
+* actualite > actualites
+* agenda > agenda-culturel
+* presentation > tiers-lieu ?
+
 Responsive
 * media queries breakpoints are 100% random for now, some cleaning to do
 * h1 titles need finer re-sizing
