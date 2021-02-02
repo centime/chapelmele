@@ -27,6 +27,10 @@ Agendas
 * besoin de bénévoles ?
 * private ?
 
+Posts (actualites etc.)
+* galleries ?
+* direct access by ID
+	* meta updt (ld-json + og)
 
 Gallery
 * bxslider ?
