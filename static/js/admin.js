@@ -1,5 +1,5 @@
 var dataRepo = 'https://chapelmele.github.io/website/';
-var ex = '[{"title": "Deuxieme actu","content":"Duis aute irure dolor in .","picture":"porte.JPG","date":"2021-02-02"},{"title": "Première actu","content":"Odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.","picture":"vitrail.jpg","date":"2021-02-01"}]';
+var ex = '[{"title": "Deuxieme actu","content":"Trois ans et demi plus tard, l’association se porte bien et vient d’intégrer la salle située sous la chapelle","picture":"porte.JPG","date":"2021-02-02"},{"title": "Première actu","content":", où des cours de Zumba étaient donnés jusqu’à l’été 2018. « Quand elle s’est libérée, on a saisi l’opportunité » , raconte Mehdi Meskini, président de l’association.","picture":"vitrail.jpg","date":"2021-02-01"}]';
   
 
 // todo: escape the shit out of it so it doesn't break first special char
@@ -37,8 +37,43 @@ function csv2json(csv){
 
 var $out = $('#admin-actu .output');
 
+function preview() {
+  // order-sensitive because there's absolutely no checks later
+  // todo: fix: object properties order isn't guaranteed
+  //
+  // todo: fix: useless hotlinking spam towards github
+    var newPost = {
+      title: $('#new-post-title').val(),
+      content: $('#new-post-content').val(),
+      picture: $('#new-post-picture').val(),
+      date: $('#new-post-date').val()
+    };
+    var $bloc = $($('#post-template').html());
+    $bloc.find('h2').html('<strong>' + newPost.title + '</strong><br/>' + newPost.date);
+    $bloc.find('.bloc-text p').html(newPost.content);
+    if (newPost.picture){
+      $bloc.find('.bloc-pic img').attr('src', 'https://chapelmele.github.io/website/actu-imgs/' + newPost.picture);
+    }
+    $('#demo-feed').html($bloc);
+    $out.val(JSON.stringify(newPost)); 
+}
+
+async function addPost(){
+  // order-sensitive because there's absolutely no checks later
+  // todo: fix: object properties order isn't guaranteed
+  var newPost = {
+    title: $('#new-post-title').val(),
+    content: $('#new-post-content').val(),
+    picture: $('#new-post-picture').val(),
+    date: $('#new-post-date').val()
+  };
+  var posts = await $.get('https://chapelmele.github.io/website/actualites.json');
+  posts.unshift(newPost);
+  $out.val(JSON.stringify(posts)); 
+}
+
 async function actuExport() {
-  posts = await $.get('https://chapelmele.github.io/website/actualites.json');
+  var posts = await $.get('https://chapelmele.github.io/website/actualites.json');
   $out.val(JSON.stringify(posts)); 
 }
 function actuConvertJsonCsv() {
@@ -58,6 +93,8 @@ function actuExampleJson() {
 
 function init(){
   var $a = $('#admin-actu');
+  $a.find('#new-post input').on('keyup', preview);
+  $a.find('.add-post').on('click', addPost);
   $a.find('.export').on('click', actuExport);
   $a.find('.convert-csv-json').on('click', actuConvertCsvJson);
   $a.find('.convert-json-csv').on('click', actuConvertJsonCsv);

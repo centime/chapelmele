@@ -6,7 +6,9 @@ async function fetchPosts(){
     var $bloc = $(template);
     $bloc.find('h2').html('<strong>'+$posts[i].title+'</strong><br/>'+ $posts[i].date);
     $bloc.find('.bloc-text p').html($posts[i].content);
-    $bloc.find('.bloc-pic img').attr('src', 'https://chapelmele.github.io/website/actu-imgs/'+$posts[i].picture);
+    if ($posts[i].picture) {
+      $bloc.find('.bloc-pic img').attr('src', 'https://chapelmele.github.io/website/actu-imgs/'+$posts[i].picture);
+    }
     $('#feed').append($bloc);
     (i%2 == 0) ? $bloc.toggleClass('bloc-img-right bloc-img-left') : 0;
   }
