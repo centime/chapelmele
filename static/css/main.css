@@ -747,26 +747,39 @@ footer {
     #three-slide {
       height: 50vw; } }
 
-#petits-chatelets-presentation .wrapper {
+#lieu-petits-chatelets-presentation .bloc-pic {
+  border-radius: 0px !important;
+  margin: 0 auto;
+  margin-top: 20px;
+  overflow: inherit !important;
+  display: flex;
+  width: 100%; }
+  @media (max-width: 1200px) {
+    #lieu-petits-chatelets-presentation .bloc-pic {
+      order: 1; } }
+  #lieu-petits-chatelets-presentation .bloc-pic img {
+    margin: 0 auto; }
+
+#collectif-petits-chatelets-presentation .wrapper {
   display: flex;
   flex-direction: column;
   padding: 40px 80px 40px 80px;
   max-width: 100%; }
   @media (max-width: 1200px) {
-    #petits-chatelets-presentation .wrapper {
+    #collectif-petits-chatelets-presentation .wrapper {
       padding: 20px; } }
-  #petits-chatelets-presentation .wrapper .bloc-text {
+  #collectif-petits-chatelets-presentation .wrapper .bloc-text {
     width: 90%;
     display: flex;
     flex-direction: row; }
-    #petits-chatelets-presentation .wrapper .bloc-text h2, #petits-chatelets-presentation .wrapper .bloc-text p {
+    #collectif-petits-chatelets-presentation .wrapper .bloc-text h2, #collectif-petits-chatelets-presentation .wrapper .bloc-text p {
       width: 50%; }
     @media (max-width: 1200px) {
-      #petits-chatelets-presentation .wrapper .bloc-text {
+      #collectif-petits-chatelets-presentation .wrapper .bloc-text {
         flex-direction: column; }
-        #petits-chatelets-presentation .wrapper .bloc-text h2, #petits-chatelets-presentation .wrapper .bloc-text p {
+        #collectif-petits-chatelets-presentation .wrapper .bloc-text h2, #collectif-petits-chatelets-presentation .wrapper .bloc-text p {
           width: 100%; } }
-  #petits-chatelets-presentation .wrapper ul {
+  #collectif-petits-chatelets-presentation .wrapper ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -774,25 +787,25 @@ footer {
     list-style: none;
     padding: 0;
     justify-content: center; }
-    #petits-chatelets-presentation .wrapper ul li {
+    #collectif-petits-chatelets-presentation .wrapper ul li {
       margin: 0px 20px 0px 20px; }
       @media (max-width: 1200px) {
-        #petits-chatelets-presentation .wrapper ul li {
+        #collectif-petits-chatelets-presentation .wrapper ul li {
           margin: 5px; } }
-      #petits-chatelets-presentation .wrapper ul li h3 {
+      #collectif-petits-chatelets-presentation .wrapper ul li h3 {
         margin: 0px;
         text-align: center; }
         @media (max-width: 1200px) {
-          #petits-chatelets-presentation .wrapper ul li h3 {
+          #collectif-petits-chatelets-presentation .wrapper ul li h3 {
             display: none; } }
-      #petits-chatelets-presentation .wrapper ul li img {
+      #collectif-petits-chatelets-presentation .wrapper ul li img {
         height: 150px;
         width: 150px;
         border-radius: 150px;
         overflow: hidden;
         max-width: 25vw;
         max-height: 25vw; }
-#petits-chatelets-presentation .bloc-link {
+#collectif-petits-chatelets-presentation .bloc-link {
   margin-top: 20px; }
 
 #programmation {
