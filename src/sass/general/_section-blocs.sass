@@ -2,7 +2,7 @@
 	display: flex
 	position: relative
 	width: 1440px
-	height: 600px
+	min-height: 600px
 	@media (max-width: 1200px)
 		height: inherit
 	max-width: 95%
@@ -30,7 +30,7 @@ section
 		@include wrapper
 
 	.bloc-link
-		width: 200px
+		min-width: 200px
 		border: 1px solid gray
 		display: inline-block
 		text-align: center
@@ -40,6 +40,10 @@ section
 		text-transform: uppercase
 		color: black
 		background-color: white
+		line-height: 1.5em
+		margin: 0 auto
+		&:hover
+			color: red
 
 section.bloc-img-left
 	.wrapper
@@ -87,6 +91,8 @@ section
 	.bloc-text
 		width: 45%
 		padding: 40px 80px 40px 80px
+		display: flex
+		flex-direction: column
 		@media (max-width: 1200px)
 			width: 90%
 			padding: 20px

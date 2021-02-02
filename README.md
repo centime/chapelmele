@@ -28,6 +28,7 @@ Agendas
 * private ?
 
 Posts (actualites etc.)
+* filterable categories (annonces, créas, évenements, résidences,..)
 * galleries ?
 * direct access by ID
 	* meta updt (ld-json + og)
@@ -48,7 +49,6 @@ Admin
 * onpage preview & update ? localStorage fiddle/save then API commit/push ?
 
 "Backend"
-* SSL
 * sitemap.xml full urls
 * sitemap.xml relevant lastmods
 * RSS

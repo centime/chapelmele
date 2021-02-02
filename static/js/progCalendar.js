@@ -1,5 +1,7 @@
 
-function displayAnchorEvent(){
+function displayAnchoredEvent(){
+	// todo: history.pushState ?
+	// todo: update metas for direct linking
 	$('.event-desc').hide(); 
 	var target = location.hash;
 	var $evs = $('.fc-event');
@@ -7,8 +9,9 @@ function displayAnchorEvent(){
 }
 
 function init(){
-	var calendarEl = $('#calendar')[0];
-    calendar = new FullCalendar.Calendar(calendarEl, {
+	var $calendar = $('#calendar')[0];
+	// todo: fix: global for dev purposes only
+    calendar = new FullCalendar.Calendar($calendar, {
       initialView: 'dayGridMonth',
       locale: 'fr',
 	  eventDidMount: function(ev) {
@@ -22,8 +25,8 @@ function init(){
     async function update(calendar){
 		var events = await $.get('/static/js/test.json');
 		calendar.addEventSource(events);
-		displayAnchorEvent();
-		window.onhashchange = displayAnchorEvent;
+		displayAnchoredEvent();
+		window.onhashchange = displayAnchoredEvent;
 	}
     update(calendar);
 }
