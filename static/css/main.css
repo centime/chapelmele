@@ -757,7 +757,8 @@ footer {
       padding: 20px; } }
   #petits-chatelets-presentation .wrapper .bloc-text {
     width: 90%;
-    display: flex; }
+    display: flex;
+    flex-direction: row; }
     #petits-chatelets-presentation .wrapper .bloc-text h2, #petits-chatelets-presentation .wrapper .bloc-text p {
       width: 50%; }
     @media (max-width: 1200px) {
@@ -791,6 +792,8 @@ footer {
         overflow: hidden;
         max-width: 25vw;
         max-height: 25vw; }
+#petits-chatelets-presentation .bloc-link {
+  margin-top: 20px; }
 
 #programmation {
   background-color: #efefef;
