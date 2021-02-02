@@ -46,6 +46,7 @@ Admin
 * agenda(s)
 
 "Backend"
+* SSL
 * sitemap.xml full urls
 * sitemap.xml relevant lastmods
 * RSS

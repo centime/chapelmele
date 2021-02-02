@@ -506,7 +506,7 @@ section.bloc-right .placeholder {
     border: 1px solid grey;
     z-index: 101;
     cursor: pointer;
-    background-color: #ffffff63 !important;
+    background-color: white !important;
     margin-top: 5px; }
     .nav-toggle #nav-panel-in div {
       display: flex;
@@ -585,6 +585,7 @@ header {
   position: fixed;
   display: flex;
   width: 100%;
+  height: 70px;
   align-items: center;
   justify-content: flex-end;
   z-index: 20;
