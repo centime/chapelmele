@@ -790,6 +790,14 @@ footer {
   max-width: 95%; }
   #programmation #calendar {
     width: 80%; }
+    #programmation #calendar .event-desc {
+      position: fixed;
+      top: 80px;
+      left: 80px;
+      background: red;
+      z-index: 1000;
+      width: 300px;
+      height: 300px; }
 
 #admin-actu {
   height: inherit !important;
