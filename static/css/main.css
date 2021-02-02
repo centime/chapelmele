@@ -604,7 +604,8 @@ header {
     padding-left: 180px;
     display: block !important; }
     header #header-title.coming-soon {
-      opacity: 1 !important; }
+      opacity: 1 !important;
+      line-height: 0.7em; }
 
 footer {
   position: relative;
