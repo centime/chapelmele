@@ -1,4 +1,4 @@
-var dataRepo = 'https://chapelmele.github.io/website/';
+var dataRepo = '//data.chapelmele.com';
 var ex = '[{"title": "Deuxieme actu","content":"Trois ans et demi plus tard, l’association se porte bien et vient d’intégrer la salle située sous la chapelle","picture":"porte.JPG","date":"2021-02-02"},{"title": "Première actu","content":", où des cours de Zumba étaient donnés jusqu’à l’été 2018. « Quand elle s’est libérée, on a saisi l’opportunité » , raconte Mehdi Meskini, président de l’association.","picture":"vitrail.jpg","date":"2021-02-01"}]';
   
 
@@ -52,7 +52,7 @@ function preview() {
     $bloc.find('h2').html('<strong>' + newPost.title + '</strong><br/>' + newPost.date);
     $bloc.find('.bloc-text p').html(newPost.content);
     if (newPost.picture){
-      $bloc.find('.bloc-pic img').attr('src', 'https://chapelmele.github.io/website/actu-imgs/' + newPost.picture);
+      $bloc.find('.bloc-pic img').attr('src', dataRepo+'/actu-imgs/' + newPost.picture);
     }
     $('#demo-feed').html($bloc);
     $out.val(JSON.stringify(newPost)); 
@@ -67,13 +67,13 @@ async function addPost(){
     picture: $('#new-post-picture').val(),
     date: $('#new-post-date').val()
   };
-  var posts = await $.get('https://chapelmele.github.io/website/actualites.json');
+  var posts = await $.get(dataRepo+'/actualites.json');
   posts.unshift(newPost);
   $out.val(JSON.stringify(posts)); 
 }
 
 async function actuExport() {
-  var posts = await $.get('https://chapelmele.github.io/website/actualites.json');
+  var posts = await $.get(dataRepo+'/actualites.json');
   $out.val(JSON.stringify(posts)); 
 }
 function actuConvertJsonCsv() {

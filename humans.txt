@@ -12,7 +12,7 @@ Tout le monde aux Petits Châtelets
                             
 /* SITE */
 Tech stack: Custom static       
-Source: github.com/centime/chapelmele
+Sourcecode: github.com/centime/chapelmele
 Software: Sass, bash
 Hosting: Github
 
