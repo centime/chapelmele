@@ -755,15 +755,18 @@ footer {
       height: 50vw; } }
 
 #lieu-petits-chatelets-presentation .bloc-pic {
+  width: 65%;
+  padding-right: 10px;
   border-radius: 0px !important;
   margin: 0 auto;
   margin-top: 20px;
   overflow: inherit !important;
-  display: flex;
-  width: 100%; }
+  display: flex; }
   @media (max-width: 1200px) {
     #lieu-petits-chatelets-presentation .bloc-pic {
-      order: 1; } }
+      order: 1;
+      width: 100%;
+      padding-right: 0px; } }
   #lieu-petits-chatelets-presentation .bloc-pic img {
     margin: 0 auto; }
 
