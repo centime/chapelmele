@@ -6,6 +6,9 @@ footer
 	width: 100%
 	background-color: white
 
+	*
+		font-family: arial, serif
+
 	.wrapper
 		width: 1440px
 		max-width: 100%
@@ -14,6 +17,7 @@ footer
 		flex-direction: row
 		border-top: 1px solid gray
 		padding-top: 10px
+		flex-wrap: wrap
 
 	#access-map
 		order: 1
@@ -23,15 +27,16 @@ footer
 			height: 300px
 			max-width: 100%
 
-	#org-details
+	#contact-info
 		order: 2
 		width: 20%
-		padding: 60px
 
-	#contact-info
+	#useful-links
 		order: 3
-		width: 20%
-		padding: 60px
+
+	#org-details
+		order: 4
+		width: 100%
 
 	#cookies-notice
 		position: absolute
@@ -82,20 +87,24 @@ footer
 	@media (max-width: 1200px)
 		.wrapper
 			flex-direction: column
+		#contact-info
+			order: 1
+			width: 90%
+			padding: 20px
 		#access-map
-			order: 3
+			order: 2
 			width: 90%
 			display: flex
 			justify-content: center
 			margin-bottom: 40px
 			iframe
 				max-width: 80%
-		#org-details
-			order: 2
+		#useful-links
+			order: 3
 			width: 90%
 			padding: 20px
-		#contact-info
-			order: 1
+		#org-details
+			order: 4
 			width: 90%
 			padding: 20px
 		.credit

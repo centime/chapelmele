@@ -627,6 +627,8 @@ footer {
   margin-top: 200px;
   width: 100%;
   background-color: white; }
+  footer * {
+    font-family: arial, serif; }
   footer .wrapper {
     width: 1440px;
     max-width: 100%;
@@ -634,7 +636,8 @@ footer {
     display: flex;
     flex-direction: row;
     border-top: 1px solid gray;
-    padding-top: 10px; }
+    padding-top: 10px;
+    flex-wrap: wrap; }
   footer #access-map {
     order: 1;
     width: 50%; }
@@ -642,14 +645,14 @@ footer {
       width: 600px;
       height: 300px;
       max-width: 100%; }
-  footer #org-details {
-    order: 2;
-    width: 20%;
-    padding: 60px; }
   footer #contact-info {
-    order: 3;
-    width: 20%;
-    padding: 60px; }
+    order: 2;
+    width: 20%; }
+  footer #useful-links {
+    order: 3; }
+  footer #org-details {
+    order: 4;
+    width: 100%; }
   footer #cookies-notice {
     position: absolute;
     z-index: 101;
@@ -692,20 +695,24 @@ footer {
   @media (max-width: 1200px) {
     footer .wrapper {
       flex-direction: column; }
+    footer #contact-info {
+      order: 1;
+      width: 90%;
+      padding: 20px; }
     footer #access-map {
-      order: 3;
+      order: 2;
       width: 90%;
       display: flex;
       justify-content: center;
       margin-bottom: 40px; }
       footer #access-map iframe {
         max-width: 80%; }
-    footer #org-details {
-      order: 2;
+    footer #useful-links {
+      order: 3;
       width: 90%;
       padding: 20px; }
-    footer #contact-info {
-      order: 1;
+    footer #org-details {
+      order: 4;
       width: 90%;
       padding: 20px; }
     footer .credit {
