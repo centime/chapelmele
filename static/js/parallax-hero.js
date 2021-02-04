@@ -31,4 +31,6 @@ $(document).ready(function(){
     hero(scrolled);
     easeInHeader(scrolled);
   };
+  
+  parallax();
 });
