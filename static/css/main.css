@@ -869,8 +869,8 @@ footer {
         right: 0px; } }
 #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation ul {
   justify-content: left; }
-#collectif-des-petits-chatelets #collectif-petits-chatelets-presentation * {
-  display: flex !important; }
+  #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation ul * {
+    display: flex !important; }
 #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li {
   min-width: 350px;
   width: 30%;
