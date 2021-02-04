@@ -58,10 +58,16 @@
 	display: flex
 	background-color: white!important
 
-#nav-panel-checkbox:checked + header *
+#nav-panel-checkbox:checked + header .main-menu
 	display: flex
 	background-color: white!important
 	opacity: 1 !important	
+
+#nav-panel-checkbox:checked + header div
+	display: flex
+	background-color: white!important
+	opacity: 1 !important	
+
 
 .nav
 	//visibility: hidden
@@ -83,11 +89,16 @@
 	transition: opacity .3s ease-in-out, visibility 0s .3s
 	display: none
 
+	.nav-section
+		display: flex
+		flex-direction: column
+
 	ul
 		display: flex
 		flex-direction: row
 		width: 100%
 		padding: 0px
+		margin: 10px
 		@media (max-width: 400px)
 			flex-direction: column
 
@@ -95,8 +106,7 @@
 		position: relative
 		width: 100%
 		text-align: center
-		border-bottom: 1px solid $black
-		border-bottom: 1px solid rgba(17,17,17,.15)
+		border: none
 		background-color: white
 		overflow: hidden
 		z-index: 10
@@ -112,7 +122,6 @@
 		a
 			display: block
 			width: 100%
-			height: 100%
 			padding: 5px 0
 			color: $black
 			font-size: 12px
@@ -121,4 +130,32 @@
 			text-decoration: none
 			transition: color .2s ease-in-out
 			justify-content: center
-				
+	
+	#nav-panel-full-menu-checkbox
+		display: none			
+	.full-menu
+		display: none
+		border-top: 1px solid gray
+		* 
+			border: none
+			padding-left: 5px
+		ul
+			flex-direction: column
+			li
+				a
+					text-align: left
+
+	.full-menu-option
+		display: flex
+		label
+			position: relative
+			right: 60px
+			// bottom: 5px
+			border: 1px solid grey
+			width: 40px
+			cursor: pointer
+
+	input#nav-panel-full-menu-checkbox:checked + .full-menu
+		display: flex
+		flex-direction: row
+

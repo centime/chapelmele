@@ -268,6 +268,9 @@ h2 {
       margin-bottom: 20px;
       font-size: 30px; } }
 
+.underlined {
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15) !important; }
+
 body {
   background-color: white;
   font-size: 16px;
@@ -538,7 +541,12 @@ section.bloc-right .placeholder {
   display: flex;
   background-color: white !important; }
 
-#nav-panel-checkbox:checked + header * {
+#nav-panel-checkbox:checked + header .main-menu {
+  display: flex;
+  background-color: white !important;
+  opacity: 1 !important; }
+
+#nav-panel-checkbox:checked + header div {
   display: flex;
   background-color: white !important;
   opacity: 1 !important; }
@@ -559,11 +567,15 @@ section.bloc-right .placeholder {
   z-index: 10;
   transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
   display: none; }
+  .nav .nav-section {
+    display: flex;
+    flex-direction: column; }
   .nav ul {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 0px; }
+    padding: 0px;
+    margin: 10px; }
     @media (max-width: 400px) {
       .nav ul {
         flex-direction: column; } }
@@ -571,8 +583,7 @@ section.bloc-right .placeholder {
     position: relative;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid #111;
-    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+    border: none;
     background-color: white;
     overflow: hidden;
     z-index: 10; }
@@ -583,7 +594,6 @@ section.bloc-right .placeholder {
     .nav li a {
       display: block;
       width: 100%;
-      height: 100%;
       padding: 5px 0;
       color: #111;
       font-size: 12px;
@@ -592,6 +602,29 @@ section.bloc-right .placeholder {
       text-decoration: none;
       transition: color 0.2s ease-in-out;
       justify-content: center; }
+  .nav #nav-panel-full-menu-checkbox {
+    display: none; }
+  .nav .full-menu {
+    display: none;
+    border-top: 1px solid gray; }
+    .nav .full-menu * {
+      border: none;
+      padding-left: 5px; }
+    .nav .full-menu ul {
+      flex-direction: column; }
+      .nav .full-menu ul li a {
+        text-align: left; }
+  .nav .full-menu-option {
+    display: flex; }
+    .nav .full-menu-option label {
+      position: relative;
+      right: 60px;
+      border: 1px solid grey;
+      width: 40px;
+      cursor: pointer; }
+  .nav input#nav-panel-full-menu-checkbox:checked + .full-menu {
+    display: flex;
+    flex-direction: row; }
 
 header {
   position: fixed;
@@ -603,7 +636,8 @@ header {
   z-index: 20;
   top: 0px;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15); }
   header #header-title {
     font-family: "IntriqueScript", serif;
     color: red;
