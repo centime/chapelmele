@@ -845,4 +845,27 @@ footer {
     min-height: 300px;
     font-family: monospace; }
 
+#collectif-des-petits-chatelets .resp-margin-top .wrapper {
+  margin-top: 200px;
+  margin-bottom: 0px; }
+#collectif-des-petits-chatelets .resp-margin-bottom .wrapper {
+  margin-bottom: 200px;
+  margin-top: 0px; }
+#collectif-des-petits-chatelets h2 {
+  margin: 0;
+  padding-top: 20px; }
+  #collectif-des-petits-chatelets h2 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 80px;
+    position: relative;
+    float: right;
+    position: relative;
+    bottom: 45px;
+    right: 20px; }
+    @media (max-width: 450px) {
+      #collectif-des-petits-chatelets h2 img {
+        bottom: 0px;
+        right: 0px; } }
+
 /*# sourceMappingURL=main.css.map */
