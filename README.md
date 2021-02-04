@@ -9,6 +9,7 @@ Content
 * social widgets ?
 * a/img alt/title
 * OSM layer
+* posts: festival, vide-dressing, four pizza, marché artisans
 
 Urls
 * actualite > actualites
