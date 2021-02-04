@@ -867,5 +867,25 @@ footer {
       #collectif-des-petits-chatelets h2 img {
         bottom: 0px;
         right: 0px; } }
+#collectif-des-petits-chatelets #collectif-petits-chatelets-presentation ul {
+  justify-content: left; }
+#collectif-des-petits-chatelets #collectif-petits-chatelets-presentation * {
+  display: flex !important; }
+#collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li {
+  min-width: 350px;
+  width: 30%;
+  margin: 0px; }
+  #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li a {
+    display: flex;
+    padding: 10px; }
+    #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li a h3 {
+      padding-top: 20px;
+      width: 200px;
+      justify-content: center;
+      flex-direction: column; }
+      #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li a h3 p {
+        justify-content: center;
+        text-decoration: none;
+        font-size: 12px; }
 
 /*# sourceMappingURL=main.css.map */
