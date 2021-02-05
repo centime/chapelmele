@@ -31,6 +31,7 @@ Agendas
 * concerts/spectacles/expos/repas ?
 * besoin de bénévoles ?
 * private ?
+* load #post first, then fullCalendar
 
 Posts (actualites etc.)
 * filterable categories (annonces, créas, évenements, résidences,..)
@@ -60,7 +61,7 @@ Admin
 
 Clean up
 * images compression
-* lazy load
+* lazy load bg url()
 * graceful degradation
 * prefetch
 * critical css
