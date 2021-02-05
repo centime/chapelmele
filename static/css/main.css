@@ -503,8 +503,6 @@ section.bloc-right .placeholder {
   text-transform: uppercase; }
   .nav-toggle #nav-panel-in {
     display: flex;
-    width: 150px;
-    height: 60px;
     border: 1px solid grey;
     z-index: 101;
     cursor: pointer;
@@ -610,8 +608,8 @@ section.bloc-right .placeholder {
       .nav .full-menu ul li a {
         text-align: left; }
   .nav .full-menu-option {
-    width: 50px;
-    min-width: 50px;
+    width: 57px;
+    min-width: 57px;
     height: 40px;
     border: 1px solid gray !important;
     list-style: none;
@@ -624,6 +622,12 @@ section.bloc-right .placeholder {
       .nav .full-menu-option label img {
         position: relative;
         bottom: 8px; }
+      .nav .full-menu-option label span {
+        position: relative;
+        bottom: 28px;
+        left: 7px;
+        z-index: 101;
+        font-family: serif; }
   .nav input#nav-panel-full-menu-checkbox:checked + .full-menu {
     display: flex;
     flex-direction: row; }
