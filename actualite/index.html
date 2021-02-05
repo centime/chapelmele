@@ -15,7 +15,7 @@
     <input type="checkbox" id="nav-panel-checkbox">
     <header>
       <div class="nav-toggle">      
-        <label id="nav-panel-in" for="nav-panel-checkbox" class="nav-panel-in"><div><span class="menu2">Menu</span><img src="/static/img/logos/menu.png"/></div></label>
+        <label id="nav-panel-in" for="nav-panel-checkbox" class="nav-panel-in"><div><!-- <span class="menu2">Menu</span> --><img src="/static/img/logos/menu.png"/></div></label>
         <label id="nav-panel-out" for="nav-panel-checkbox" class="nav-panel-out"></label>
       </div>
       <a id="header-title" class="coming-soon" href="/">Site en construction</a>
@@ -23,15 +23,16 @@
       <div class="nav">
         <div class="nav-section">
           <ul class="main-menu">
-            <li class="full-menu-option">
+            <li >
               <a href="/presentation/">Tiers-lieu associatif</a>
-              <label id="nav-panel-full-menu-in" for="nav-panel-full-menu-checkbox" class="nav-panel-in"><img src="/static/img/logos/menu.png"/></label>
             </li>
             <li><a href="/agenda/">Agenda Culturel</a></li>
             <li><a href="/actualite/">Actualités</a></li>
             <li><a href="/residences-artistiques/">Résidences artistiques</a></li>
             <!-- <li><a href="#">Nous soutenir</a></li> -->
             <li><a href="#footer">Nous contacter</a></li>
+            <li class="full-menu-option"><label id="nav-panel-full-menu-in" for="nav-panel-full-menu-checkbox" class="nav-panel-in"><img src="/static/img/logos/menu.png"/></label></li>
+
           </ul>
           <input type="checkbox" id="nav-panel-full-menu-checkbox">
           <ul class="full-menu">
@@ -43,7 +44,7 @@
               <li><a href="/presentation/chapelmele/#chapelmele-cours-et-ateliers">° Cours et ateliers</a></li>
               <li><a href="/residences-artistiques/">° Accueil d'artistes</a></li>
             </ul>
-            <ul>
+            <ul class="menu-chatelets">
               <li><a class="underlined" href="/presentation/collectif-des-petits-chatelets/">Collectif des Petits Châtelets</a></li>
               <li><a href="/presentation/collectif-des-petits-chatelets/#chatelets-marches">° Marchés d'artisans</a></li>
               <li><a href="/presentation/collectif-des-petits-chatelets/#chatelets-alexandre-marnat">° Alexandre Marnat</a></li>
