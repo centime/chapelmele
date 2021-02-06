@@ -67,6 +67,7 @@ Clean up
 * critical css
 * fix #hero2 bullshit on homepage
 * remove jquery
+	https://github.com/franciscop/umbrella/blob/master/jquery.md
 
 
 Run dev
