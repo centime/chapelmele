@@ -239,7 +239,10 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: 0 0 10px 0;
   text-align: justify;
-  font-size: 20px; }
+  font-size: 14px; }
+  @media (min-width: 1300px) {
+    p {
+      font-size: 20px; } }
   @media (max-width: 400px) {
     p {
       font-size: 16px; } }
@@ -649,7 +652,7 @@ header {
     font-family: "IntriqueScript", serif;
     color: red;
     font-size: 3em;
-    opacity: 0;
+    opacity: 1 !important;
     margin: 0px auto;
     height: 100%;
     text-align: center;
@@ -657,6 +660,7 @@ header {
     padding-left: 180px;
     z-index: 100;
     display: block !important;
+    line-height: 0.7em;
     float: right;
     margin-right: 80px;
     padding: 0px;
@@ -666,9 +670,6 @@ header {
     @media (max-width: 770px) {
       header #header-title {
         font-size: 2em; } }
-    header #header-title.coming-soon {
-      opacity: 1 !important;
-      line-height: 0.7em; }
 
 footer {
   position: relative;
