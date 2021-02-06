@@ -307,6 +307,9 @@ body {
     max-width: 100%;
     text-decoration: underline;
     line-height: 0.8em; }
+    @media (max-width: 770px) {
+      #hero h1 {
+        font-size: 30vw; } }
     @media screen and (min-width: 1190px) {
       #hero h1 {
         margin: 20vh auto 0; } }
@@ -658,7 +661,11 @@ header {
     margin-right: 80px;
     padding: 0px;
     position: relative;
-    top: 13px; }
+    top: 13px;
+    text-decoration: none; }
+    @media (max-width: 770px) {
+      header #header-title {
+        font-size: 2em; } }
     header #header-title.coming-soon {
       opacity: 1 !important;
       line-height: 0.7em; }
