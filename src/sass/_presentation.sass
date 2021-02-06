@@ -1,6 +1,6 @@
 #lieu-petits-chatelets-presentation
 	.bloc-pic
-		@media (max-width: 1200px)
+		@media (max-width: $desktop)
 			order: 1
 			width: 100%
 			padding-right: 0px
@@ -19,7 +19,7 @@
 		display: flex
 		flex-direction: column
 		padding: 40px 80px 40px 80px
-		@media (max-width: 1200px)
+		@media (max-width: $desktop)
 			padding: 20px
 		max-width: 100%
 
@@ -30,7 +30,7 @@
 			h2, p
 				width: 50%
 
-			@media (max-width: 1200px)
+			@media (max-width: $desktop)
 				flex-direction: column
 				h2, p
 					width: 100%
@@ -47,12 +47,12 @@
 
 			li
 				margin: 0px 20px 0px 20px
-				@media (max-width: 1200px)
+				@media (max-width: $desktop)
 					margin: 5px
 				h3
 					margin: 0px
 					text-align: center
-					@media (max-width: 1200px)
+					@media (max-width: $desktop)
 						display: none
 				img
 					height: 150px

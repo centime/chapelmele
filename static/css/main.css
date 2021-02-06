@@ -240,7 +240,7 @@ p {
   margin: 0 0 10px 0;
   text-align: justify;
   font-size: 20px; }
-  @media (max-width: 500px) {
+  @media (max-width: 400px) {
     p {
       font-size: 16px; } }
 
@@ -263,7 +263,7 @@ h2 {
   font-size: 42px;
   font-family: "Raleway", Helvetica, sans-serif;
   font-weight: 100; }
-  @media (max-width: 640px) {
+  @media (max-width: 770px) {
     h2 {
       margin-bottom: 20px;
       font-size: 30px; } }
@@ -300,23 +300,18 @@ body {
     z-index: 1;
     color: #fa4242;
     text-align: center;
-    font-size: 20vh;
+    font-size: 20vw;
     margin: 30vh auto 0;
     font-family: "IntriqueScript", serif;
     font-weight: 200;
     max-width: 100%;
     text-decoration: underline;
     line-height: 0.8em; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1190px) {
       #hero h1 {
-        font-size: 40vh;
         margin: 20vh auto 0; } }
     #hero h1.long-h1 {
-      margin: 15vh auto !important;
-      font-size: 30vh !important; }
-      @media (max-width: 1000px) {
-        #hero h1.long-h1 {
-          font-size: 20vh !important; } }
+      margin: 15vh auto !important; }
 
 #hero2 {
   position: fixed;
@@ -339,7 +334,7 @@ body {
     font-weight: 200;
     max-width: 100%;
     text-decoration: underline; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 770px) {
       #hero2 .content {
         font-size: 40vh;
         margin: 20vh auto 0; } }
@@ -373,9 +368,12 @@ section {
   z-index: 10;
   top: 80vh;
   background-color: #f000; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section {
       height: inherit; } }
+  @media (min-width: 770px) {
+    section {
+      max-width: 80%; } }
   @media (max-width: 768px) {
     section {
       margin: 15px auto; } }
@@ -403,18 +401,18 @@ section {
     section .bloc-link:hover {
       color: red; }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
   section.bloc-img-left .wrapper {
     flex-direction: column; } }
 section.bloc-img-left .bloc-pic {
   order: 1; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section.bloc-img-left .bloc-pic {
       order: 3; } }
 section.bloc-img-left .bloc-text {
   order: 2; }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
   section.bloc-img-right .wrapper {
     flex-direction: column; } }
 section.bloc-img-right .bloc-pic {
@@ -425,7 +423,7 @@ section.bloc-img-right .bloc-text {
 section .bloc-pic {
   width: 45%;
   padding: 80px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section .bloc-pic {
       height: 250px;
       width: 250px;
@@ -435,7 +433,7 @@ section .bloc-pic {
       margin-bottom: 40px; } }
   section .bloc-pic img {
     width: 100%; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1190px) {
       section .bloc-pic img {
         min-width: 250px;
         min-height: 250px;
@@ -447,7 +445,7 @@ section .bloc-text {
   padding: 40px 80px 40px 80px;
   display: flex;
   flex-direction: column; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section .bloc-text {
       width: 90%;
       padding: 20px; } }
@@ -456,7 +454,7 @@ section .bloc-text {
 section .placeholder {
   flex: 1 0 50%; }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
   section.bloc-left {
     flex-direction: column; } }
 section.bloc-left .bloc-text {
@@ -464,7 +462,7 @@ section.bloc-left .bloc-text {
 section.bloc-left .wrapper {
   width: 50%;
   order: 1; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section.bloc-left .wrapper {
       width: 100%;
       margin-bottom: 200px; } }
@@ -472,7 +470,7 @@ section.bloc-left .placeholder {
   order: 2;
   width: 50%; }
 
-@media (max-width: 1200px) {
+@media (max-width: 1190px) {
   section.bloc-right {
     flex-direction: column; } }
 section.bloc-right .bloc-text {
@@ -480,7 +478,7 @@ section.bloc-right .bloc-text {
 section.bloc-right .wrapper {
   width: 50%;
   order: 2; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     section.bloc-right .wrapper {
       width: 100%;
       margin-top: 200px; } }
@@ -655,7 +653,12 @@ header {
     padding-right: 180px;
     padding-left: 180px;
     z-index: 100;
-    display: block !important; }
+    display: block !important;
+    float: right;
+    margin-right: 80px;
+    padding: 0px;
+    position: relative;
+    top: 13px; }
     header #header-title.coming-soon {
       opacity: 1 !important;
       line-height: 0.7em; }
@@ -732,7 +735,7 @@ footer {
     z-index: 100;
     bottom: 0px;
     right: 20px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     footer .wrapper {
       flex-direction: column; }
     footer #contact-info {
@@ -803,7 +806,7 @@ footer {
   margin-top: 20px;
   overflow: inherit !important;
   display: flex; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     #lieu-petits-chatelets-presentation .bloc-pic {
       order: 1;
       width: 100%;
@@ -816,7 +819,7 @@ footer {
   flex-direction: column;
   padding: 40px 80px 40px 80px;
   max-width: 100%; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1190px) {
     #collectif-petits-chatelets-presentation .wrapper {
       padding: 20px; } }
   #collectif-petits-chatelets-presentation .wrapper .bloc-text {
@@ -825,7 +828,7 @@ footer {
     flex-direction: row; }
     #collectif-petits-chatelets-presentation .wrapper .bloc-text h2, #collectif-petits-chatelets-presentation .wrapper .bloc-text p {
       width: 50%; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1190px) {
       #collectif-petits-chatelets-presentation .wrapper .bloc-text {
         flex-direction: column; }
         #collectif-petits-chatelets-presentation .wrapper .bloc-text h2, #collectif-petits-chatelets-presentation .wrapper .bloc-text p {
@@ -840,13 +843,13 @@ footer {
     justify-content: center; }
     #collectif-petits-chatelets-presentation .wrapper ul li {
       margin: 0px 20px 0px 20px; }
-      @media (max-width: 1200px) {
+      @media (max-width: 1190px) {
         #collectif-petits-chatelets-presentation .wrapper ul li {
           margin: 5px; } }
       #collectif-petits-chatelets-presentation .wrapper ul li h3 {
         margin: 0px;
         text-align: center; }
-        @media (max-width: 1200px) {
+        @media (max-width: 1190px) {
           #collectif-petits-chatelets-presentation .wrapper ul li h3 {
             display: none; } }
       #collectif-petits-chatelets-presentation .wrapper ul li img {

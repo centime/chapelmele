@@ -16,7 +16,7 @@
 		z-index: 1
 		color: #fa4242
 		text-align: center
-		font-size: 20vh
+		font-size: 20vw
 		//text-shadow: 0 2px 2px rgba(0, 0, 0, 0.35)
 		margin: 30vh auto 0
 		font-family: "IntriqueScript", serif
@@ -25,15 +25,15 @@
 		text-decoration: underline
 		line-height: 0.8em
 
-		@media screen and (min-width: $medium)
-			font-size: 40vh
+		@media screen and (min-width: $desktop)
+			//font-size: 40vh
 			margin: 20vh auto 0
 
 		&.long-h1
 			margin: 15vh auto !important
-			font-size: 30vh !important
-			@media (max-width: 1000px)
-				font-size: 20vh !important
+			//font-size: 30vh !important
+			@media (max-width: $desktop)
+				//font-size: 20vh !important
 
 #hero2
 	position: fixed
@@ -60,6 +60,6 @@
 		max-width: 100%
 		text-decoration: underline
 
-		@media screen and (min-width: $medium)
+		@media screen and (min-width: $tablet)
 			font-size: 40vh
 			margin: 20vh auto 0
