@@ -669,7 +669,8 @@ header {
     text-decoration: none; }
     @media (max-width: 770px) {
       header #header-title {
-        font-size: 2em; } }
+        font-size: 2em;
+        line-height: 1.3em; } }
 
 footer {
   position: relative;
