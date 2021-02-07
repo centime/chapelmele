@@ -60,6 +60,7 @@ Admin
 * open graph
 
 Clean up
+* br/ : check for spaces presence
 * images compression
 * lazy load bg url()
 * graceful degradation
