@@ -12,9 +12,7 @@ Content
 * posts: festival, vide-dressing, four pizza, marché artisans
 
 Urls
-* actualite > actualites
-* agenda > agenda-culturel
-* presentation > tiers-lieu ?
+* residences-artistiques > residences-artistiques-en-normandie
 
 Responsive
 * media queries breakpoints are 100% random for now, some cleaning to do

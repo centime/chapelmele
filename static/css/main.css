@@ -317,7 +317,11 @@ body {
       #hero h1 {
         margin: 20vh auto 0; } }
     #hero h1.long-h1 {
-      margin: 15vh auto !important; }
+      margin: 15vh auto !important;
+      font-size: 15vw !important; }
+      @media (max-width: 770px) {
+        #hero h1.long-h1 {
+          font-size: 25vw !important; } }
 
 #hero2 {
   position: fixed;
@@ -890,14 +894,6 @@ footer {
       width: 300px;
       height: 300px; }
 
-#admin-actu {
-  height: inherit !important;
-  height: inherit !important; }
-  #admin-actu textarea {
-    width: 100%;
-    min-height: 300px;
-    font-family: monospace; }
-
 #collectif-des-petits-chatelets .resp-margin-top .wrapper {
   margin-top: 200px;
   margin-bottom: 0px; }
@@ -939,5 +935,13 @@ footer {
       #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li a h3 p {
         justify-content: center;
         font-size: 12px; }
+
+#admin-actu {
+  height: inherit !important;
+  height: inherit !important; }
+  #admin-actu textarea {
+    width: 100%;
+    min-height: 300px;
+    font-family: monospace; }
 
 /*# sourceMappingURL=main.css.map */
