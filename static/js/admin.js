@@ -100,7 +100,16 @@ function init(){
   $a.find('.convert-json-csv').on('click', actuConvertJsonCsv);
   $a.find('.example-csv').on('click', actuExampleCsv);
   $a.find('.example-json').on('click', actuExampleJson);
+
+  $('#admin-token-save').on('click', saveAdminToken);
+  $('#admin-mode-activate').on('click', adminModeActivate);
 }
 
+function saveAdminToken(){
+  localStorage.adminToken = $('#admin-token').val();
+}
+function adminModeActivate(){
+  localStorage.isAdminActive = true;
+}
 
 $(document).ready(init);

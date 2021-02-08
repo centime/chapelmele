@@ -1,6 +1,16 @@
     <div id="hero" class="hero hero-top" style="background-image: url(/static/img/residences-artistiques-normandie/cour-chapelle-vue-aerienne.jpg)" >
           <h1 class="long-h1">Admin</h1>
     </div>
+    <section class="content">
+      <div class="wrapper">
+        <div class="bloc-text">
+          <h2><strong>Admin mode</strong></h2>
+            <input type="text" name="token" id="admin-token" placeholder="token-123..." />
+            <button id="admin-token-save">Sauvegarder le token</button>
+            <button id="admin-mode-activate">Activer le mode admin</button>
+        </div>
+      </div>
+    </section>
     <section id="admin-actu" class="content bloc-left">
       <div class="wrapper">
         <div class="bloc-text">
@@ -40,6 +50,7 @@
             <li>Copier dans actualites.json</li>
           </ol>
         </div>
+        <textarea id="imgs-list"></textarea>
       </div>
     </section>
     <div id="demo-feed"></div>
@@ -62,3 +73,5 @@
         </div>
       </div>
     </section>
+    
+    <script>document.write('<script type="module" src="/static/js/gh.js"><\/script>')</script>
