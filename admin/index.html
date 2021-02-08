@@ -75,14 +75,19 @@
     <section class="content">
       <div class="wrapper">
         <div class="bloc-text">
-          <h2><strong>Admin mode</strong></h2>
-            <input type="text" name="token" id="admin-token" placeholder="token-123..." />
-            <button id="admin-token-save">Sauvegarder le token</button>
-            <button id="admin-mode-activate">Activer le mode admin</button>
+          <h2><strong>Edition</strong></h2>
+            <button id="editor-mode-activate">Activer le mode Edition</button>
+            <p><a href="https://github.com/chapelmele/website/commits/master" target="_blank">Liste des modifications</a></p>
+          <h2><strong>Identifiants</strong></h2>
+            <input type="text" name="owner" id="ghCMS-owner" placeholder="chapelmele..." value="chapelmele" style="display:none"/>
+            <input type="text" name="repo" id="ghCMS-repo" placeholder="website..." value="website" style="display:none"/>
+            <input type="text" name="token" id="ghCMS-token" placeholder="token-123..." />
+            <input type="text" name="remote" id="ghCMS-remote" placeholder="data.website.com" value="data.chapelmele.com" style="display:none"/>
+            <button id="ghCMS-save-credentials">Enregistrer</button>
         </div>
       </div>
     </section>
-    <section id="admin-actu" class="content bloc-left">
+<!--     <section id="admin-actu" class="content bloc-left">
       <div class="wrapper">
         <div class="bloc-text">
 
@@ -133,7 +138,7 @@
         </div>
       </div>
       <div class="placeholder"></div>
-    </section>
+    </section> -->
 
     <section class="content">
       <div class="wrapper">
@@ -145,7 +150,7 @@
       </div>
     </section>
     
-    <script>document.write('<script type="module" src="/static/js/gh.js"><\/script>')</script>    <footer id="footer">
+    <!-- <script>document.write('<script type="module" src="/static/js/ghcms.js"><\/script>')</script> -->    <footer id="footer">
       <div class="wrapper">
         <div id="contact-info">
           <h3>Nous contacter:</h3>
@@ -187,9 +192,11 @@
     </footer>
     <script src="/static/js/zepto.min.js"></script>
     <!-- <script src="/static/js/jquery.min.js"></script> -->
-    <script src="/static/js/parallax-hero.js"></script>
-    <script>(''+window.location).indexOf('/agenda/')>0 ? document.write('<script src="/static/js/fullCalendar.js"><\/script><script src="/static/js/progCalendar.js"><\/script><\/script><script src="/static/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/static/css/fullCalendar.css">') : 0</script>
-    <script>(''+window.location).indexOf('/actualites/')>0 ? document.write('<script src="/static/js/actualites.js"><\/script>') : 0</script>
-    <script>(''+window.location).indexOf('/admin/')>0 ? document.write('<script src="/static/js/admin.js"><\/script>') : 0</script>
+    <script async src="/static/js/parallax-hero.js"></script>
+    <script async src="/static/js/ghcms-edits.js"></script>
+    <script>(''+window.location).indexOf('/agenda/')>0 ? document.write('<script src="/static/js/fullCalendar.js"><\/script><script async src="/static/js/progCalendar.js"><\/script><\/script><script async src="/static/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/static/css/fullCalendar.css">') : 0</script>
+    <script>(''+window.location).indexOf('/actualites/')>0 ? document.write('<script async src="/static/js/actualites.js"><\/script>') : 0</script>
+    <script>(''+window.location).indexOf('/admin/')>0 ? document.write('<script async src="/static/js/admin.js"><\/script>') : 0</script>
+    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script async type="module" src="/static/js/ghcms.js"><\/script>'): 0</script>
   </body>
 </html>

@@ -4,14 +4,19 @@
     <section class="content">
       <div class="wrapper">
         <div class="bloc-text">
-          <h2><strong>Admin mode</strong></h2>
-            <input type="text" name="token" id="admin-token" placeholder="token-123..." />
-            <button id="admin-token-save">Sauvegarder le token</button>
-            <button id="admin-mode-activate">Activer le mode admin</button>
+          <h2><strong>Edition</strong></h2>
+            <button id="editor-mode-activate">Activer le mode Edition</button>
+            <p><a href="https://github.com/chapelmele/website/commits/master" target="_blank">Liste des modifications</a></p>
+          <h2><strong>Identifiants</strong></h2>
+            <input type="text" name="owner" id="ghCMS-owner" placeholder="chapelmele..." value="chapelmele" style="display:none"/>
+            <input type="text" name="repo" id="ghCMS-repo" placeholder="website..." value="website" style="display:none"/>
+            <input type="text" name="token" id="ghCMS-token" placeholder="token-123..." />
+            <input type="text" name="remote" id="ghCMS-remote" placeholder="data.website.com" value="data.chapelmele.com" style="display:none"/>
+            <button id="ghCMS-save-credentials">Enregistrer</button>
         </div>
       </div>
     </section>
-    <section id="admin-actu" class="content bloc-left">
+<!--     <section id="admin-actu" class="content bloc-left">
       <div class="wrapper">
         <div class="bloc-text">
 
@@ -62,7 +67,7 @@
         </div>
       </div>
       <div class="placeholder"></div>
-    </section>
+    </section> -->
 
     <section class="content">
       <div class="wrapper">
@@ -74,4 +79,4 @@
       </div>
     </section>
     
-    <script>document.write('<script type="module" src="/static/js/gh.js"><\/script>')</script>
+    <!-- <script>document.write('<script type="module" src="/static/js/ghcms.js"><\/script>')</script> -->

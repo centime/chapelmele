@@ -1,0 +1,30 @@
+#ghCMS-editor-panel
+	position: fixed
+	width: 25%
+	height: 80%
+	background: white
+	border: 5px solid grey
+	border-radius: 10px
+	z-index: 10
+	top: 70px
+	right: 0px
+	display: flex
+	flex-direction: column
+	overflow: hidden
+
+	&.mini
+		height: 80px
+	&.maxi
+		height: 80%
+
+	h2
+		button
+			float: right
+	input
+		display: none
+	textarea
+		width: 100%
+		height: 600px
+
+.ghcms-edit-option
+	width: 70px

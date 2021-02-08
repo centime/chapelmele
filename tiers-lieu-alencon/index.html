@@ -78,7 +78,7 @@
         <div class="bloc-pic"><img loading="lazy" src="/static/img/tiers-lieu-alencon/tenture-exposition-chapelle.jpg" alt="Rassemblement à l'extérieur"></div>
         <div class="bloc-text">
           <h2><strong>Chapêlmêle</strong><br/> association culturelle et artistique</h2>
-          <p>
+          <div class="ghcms ghcms-1">
             <ul>
               <li>Favoriser les pratiques pluri-disciplinaires artistiques, qu'elles soient amateurs ou professionnelles, en offrant des espaces de création aux artistes. Chapêlmêle entend soutenir la création contemporaine, l’émergence de nouveaux talents et les projets innovants ;</li>
               <li>Participer à la diffusion d’artistes locaux ;</li>
@@ -87,7 +87,7 @@
               <li>Tisser des partenariats étroits et constructifs avec l’ensemble des acteurs culturels locaux, des associations et des équipements existants, permettant de créer des synergies et des passerelles au service des artistes et des populations ;</li>
               <li>Renforcer la notion de culture, vecteur de lien social auprès des habitants du territoire, en rayonnant également surle nord de la Sarthe et l’est de la Mayenne.</li>
             </ul>
-          </p>
+          </div>
 
           <a class="bloc-link" href="/tiers-lieu-alencon/chapelmele/">Nos activités</a>
         </div>
@@ -98,10 +98,10 @@
         <div class="bloc-pic"><img loading="lazy" src="/static/img/tiers-lieu-alencon/plan-chatelets.png" alt="Rassemblement à l'extérieur"></div>
         <div class="bloc-text">
           <h2><strong>Un lieu bouillonant d'énergie</strong><br/> et chargé d'histoire</h2>
-          <p>Chapêlmêle loue ses locaux à l'Association des Petits Châtelets, et a voix au CA de l'association. Les Petits Châtelets est un ensemble patrimonial constitué de 5000m2 habitables, une chapelle aujourd'hui désacralisée, des locaux d'entrepôt, des espaces verts et des éléments classés au patrimoine, fédérant de multiples époques et histoires au sein de la ville d'Alençon.</p>
-          <p>L'association des Petits Châtelets, propriétaire des lieux, loue à ce jour 13 ateliers à des artistes implantés sur le site, ainsi qu'à diverses associations portées sur l'économie sociale et solidaire.</p>
-          <p>Peu à peu, les différents locataires se sont regroupés afin de décloisonner les initiatives, donnant lieu à un collectif qui s'organise, se regroupe et créé des passerelles à la rencontre de lapopulation du territoire.</p>
-          <p>Cette implantation au cœur d'un environnement si fertile offre à nos activités une caisse de résonance hors du commun, à un moment où les alençonnais usagers réguliers du site de Petits-Châtelets sont de plus en plus nombreux</p>
+          <div class="ghcms ghcms-2">Chapêlmêle loue ses locaux à l'Association des Petits Châtelets, et a voix au CA de l'association. Les Petits Châtelets est un ensemble patrimonial constitué de 5000m2 habitables, une chapelle aujourd'hui désacralisée, des locaux d'entrepôt, des espaces verts et des éléments classés au patrimoine, fédérant de multiples époques et histoires au sein de la ville d'Alençon.<br/> 
+          L'association des Petits Châtelets, propriétaire des lieux, loue à ce jour 13 ateliers à des artistes implantés sur le site, ainsi qu'à diverses associations portées sur l'économie sociale et solidaire.<br/> 
+          Peu à peu, les différents locataires se sont regroupés afin de décloisonner les initiatives, donnant lieu à un collectif qui s'organise, se regroupe et créé des passerelles à la rencontre de lapopulation du territoire.<br/> 
+          Cette implantation au cœur d'un environnement si fertile offre à nos activités une caisse de résonance hors du commun, à un moment où les alençonnais usagers réguliers du site de Petits-Châtelets sont de plus en plus nombreux</div>
           <a class="bloc-link" href="/tiers-lieu-alencon/histoire-des-petits-chatelets/">Histoire du lieu</a>
         </div>
       </div>
@@ -196,9 +196,11 @@
     </footer>
     <script src="/static/js/zepto.min.js"></script>
     <!-- <script src="/static/js/jquery.min.js"></script> -->
-    <script src="/static/js/parallax-hero.js"></script>
-    <script>(''+window.location).indexOf('/agenda/')>0 ? document.write('<script src="/static/js/fullCalendar.js"><\/script><script src="/static/js/progCalendar.js"><\/script><\/script><script src="/static/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/static/css/fullCalendar.css">') : 0</script>
-    <script>(''+window.location).indexOf('/actualites/')>0 ? document.write('<script src="/static/js/actualites.js"><\/script>') : 0</script>
-    <script>(''+window.location).indexOf('/admin/')>0 ? document.write('<script src="/static/js/admin.js"><\/script>') : 0</script>
+    <script async src="/static/js/parallax-hero.js"></script>
+    <script async src="/static/js/ghcms-edits.js"></script>
+    <script>(''+window.location).indexOf('/agenda/')>0 ? document.write('<script src="/static/js/fullCalendar.js"><\/script><script async src="/static/js/progCalendar.js"><\/script><\/script><script async src="/static/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/static/css/fullCalendar.css">') : 0</script>
+    <script>(''+window.location).indexOf('/actualites/')>0 ? document.write('<script async src="/static/js/actualites.js"><\/script>') : 0</script>
+    <script>(''+window.location).indexOf('/admin/')>0 ? document.write('<script async src="/static/js/admin.js"><\/script>') : 0</script>
+    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script async type="module" src="/static/js/ghcms.js"><\/script>'): 0</script>
   </body>
 </html>
