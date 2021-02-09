@@ -47,8 +47,15 @@ Admin
 * current csv <-> json is beyond broken and nothing more than a quick PoC
 * cache buster
 * agenda(s)
-* update via API (https://stackoverflow.com/questions/23971481/post-to-github-v3-api-using-ajax-and-javascript-fails-with-a-http-404/23974430#23974430)
+* [done?] update via API (https://stackoverflow.com/questions/23971481/post-to-github-v3-api-using-ajax-and-javascript-fails-with-a-http-404/23974430#23974430)
 * onpage preview & update ? localStorage fiddle/save then API commit/push ?
+
+ghCMS
+* UX validation confirm
+* Edition mode localstorage for immediate perceived updated
+* html instructions
+* html editor
+* merge checkCredentials & fetchEdits ?
 
 "Backend"
 * sitemap.xml full urls

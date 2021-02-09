@@ -23,6 +23,8 @@ remote = "//" + ghCMSCredentials.remote;
 import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
 const octokit = new Octokit({ auth: ghCMSCredentials.token });
 
+var mdConverter = new showdown.Converter();
+
 $(document).ready(()=>{
   checkCredentials()
   .then(displayPanel)
@@ -51,7 +53,6 @@ function displayPanel(){
   Les mises à jour mettent quelques dizaines de secondes à apparaître.
   <input></input>
   <textarea></textarea>
-  <button class="visualize">Visualiser</button>
   <button class="cancel">Annuler</button>
   <button class="validate">Valider</button>
 </div>
@@ -64,7 +65,7 @@ function initPanel(){
   let $panel = $('#ghCMS-editor-panel');
   $panel.find('.close').on('click', disableEditorMode);
   $panel.find('.minimize').on('click', ()=>($panel.toggleClass('mini maxi')));
-  $panel.find('.visualize').on('click', visualizeEdit);
+  $panel.find('textarea').on('keyup', visualizeEdit);
   $panel.find('.cancel').on('click', cancelEdit);
   $panel.find('.validate').on('click', validateEdit);
 }
@@ -91,18 +92,22 @@ function enableEditOptions(){
 }
 
 function getGhCmsId($e){
+  // todo: some more robust checks would be good
   return $e.attr('class').split(/\s/).filter((c)=>c.startsWith('ghcms-'));
 }
 
 function loadToPanel(ghCmsId){
   // todo: check if there are several identic ghCmsId on this page. That would break stuff
   $('#ghCMS-editor-panel input').val(ghCmsId);
-  $('#ghCMS-editor-panel textarea').val($('.'+ghCmsId).html());
+  $('#ghCMS-editor-panel textarea').val(mdConverter.makeMarkdown($('.'+ghCmsId).html()));
   $('#ghCMS-editor-panel').removeClass('mini').addClass('maxi');
 }
 
 function visualizeEdit(){
-  $('.'+$('#ghCMS-editor-panel input').val()).html($('#ghCMS-editor-panel textarea').val());
+  $('.'+$('#ghCMS-editor-panel input').val()).html(mdConverter.makeHtml($('#ghCMS-editor-panel textarea').val()));
+  // ,
+  //   text      = '# hello, markdown!',
+  //   html      = converter.makeHtml(text);
 }
 
 function cancelEdit(){
@@ -114,7 +119,7 @@ function validateEdit(){
   if (!resp) { return }
 
   const targetEl = $('#ghCMS-editor-panel input').val();
-  const newContent = $('#ghCMS-editor-panel textarea').val();
+  const newContent = mdConverter.makeHtml($('#ghCMS-editor-panel textarea').val());
 
   edits[pageLocation] = edits[pageLocation] || {};
   // todo: tofix: I shouldn't have to do this to get around accentuated chars...

@@ -176,6 +176,6 @@
     <script>(''+window.location).indexOf('/agenda/')>0 ? document.write('<script src="/static/js/fullCalendar.js"><\/script><script async src="/static/js/progCalendar.js"><\/script><\/script><script async src="/static/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/static/css/fullCalendar.css">') : 0</script>
     <script>(''+window.location).indexOf('/actualites/')>0 ? document.write('<script async src="/static/js/actualites.js"><\/script>') : 0</script>
     <script>(''+window.location).indexOf('/admin/')>0 ? document.write('<script async src="/static/js/admin.js"><\/script>') : 0</script>
-    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script async type="module" src="/static/js/ghcms.js"><\/script>'): 0</script>
+    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script src="/static/js/showdown.js"><\/script><script type="module" src="/static/js/ghcms.js"><\/script>'): 0</script>
   </body>
 </html>
