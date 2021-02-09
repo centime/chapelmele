@@ -75,10 +75,10 @@ Best of both worlds ?
 Et là on arrive dans les parties où le site statique va dominer incontestablement.
 
 
-![screenshot google pagespeed insight 98%](https://chapelmele.com/readme-imgs/pagespeedinsight-98-2021-02-09.png "google pagespeed insight 98%")
+![screenshot google pagespeed insight 98%](https://raw.githubusercontent.com/centime/chapelmele/main/readme-imgs/pagespeedinsight-98-2021-02-09.png "google pagespeed insight 98%")
 
 
-![screenshot gtmetrix performances 100%](https://chapelmele.com/readme-imgs/gtmetrix-100-2021-02-09.png "gtmetrix performances 100%")
+![screenshot gtmetrix performances 100%](https://raw.githubusercontent.com/centime/chapelmele/main/readme-imgs/gtmetrix-100-2021-02-09.png "gtmetrix performances 100%")
 
 Ces scores reflètent les performances d'un site selon tout un tas de critères. Pour voir les détails:
 
