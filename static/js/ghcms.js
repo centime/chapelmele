@@ -1,4 +1,4 @@
-// ghCMS v0.1
+// ghCMS v0.2
 // github.com/centime/ghcms
 
 
@@ -23,6 +23,7 @@ remote = "//" + ghCMSCredentials.remote;
 import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
 const octokit = new Octokit({ auth: ghCMSCredentials.token });
 
+// todo: restrict hns to h3s
 var mdConverter = new showdown.Converter();
 
 $(document).ready(()=>{
@@ -104,10 +105,10 @@ function loadToPanel(ghCmsId){
 }
 
 function visualizeEdit(){
-  $('.'+$('#ghCMS-editor-panel input').val()).html(mdConverter.makeHtml($('#ghCMS-editor-panel textarea').val()));
-  // ,
-  //   text      = '# hello, markdown!',
-  //   html      = converter.makeHtml(text);
+  $('.'+$('#ghCMS-editor-panel input').val()).html(
+    mdConverter.makeHtml($('#ghCMS-editor-panel textarea').val())
+  );
+
 }
 
 function cancelEdit(){

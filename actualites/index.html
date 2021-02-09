@@ -94,8 +94,7 @@
           <p>41 chemin des Châtelets, 61000 Alençon</p>
         </div>
         <div id="access-map">
-            <!-- <h3>Rendez-nous visite !</h3> -->
-            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=0.06293535232543947%2C48.43437585276107%2C0.07709741592407228%2C48.44058978410332&amp;layer=mapnik&amp;marker=48.43748291343954%2C0.07001638412475586" style="border: 1px solid black"></iframe>
+            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="" data-src="https://www.openstreetmap.org/export/embed.html?bbox=0.06293535232543947%2C48.43437585276107%2C0.07709741592407228%2C48.44058978410332&amp;layer=mapnik&amp;marker=48.43748291343954%2C0.07001638412475586" style="border: 1px solid black"></iframe>
         </div>
         <div id="useful-links">
           <h3>Les copains:</h3>
@@ -134,5 +133,6 @@
     <script>(''+window.location).indexOf('/actualites/')>0 ? document.write('<script async src="/static/js/actualites.js"><\/script>') : 0</script>
     <script>(''+window.location).indexOf('/admin/')>0 ? document.write('<script async src="/static/js/admin.js"><\/script>') : 0</script>
     <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script src="/static/js/showdown.js"><\/script><script type="module" src="/static/js/ghcms.js"><\/script>'): 0</script>
+    <script async defer src="/static/js/deferIframes.js"></script>
   </body>
 </html>
