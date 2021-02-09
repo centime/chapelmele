@@ -2,7 +2,8 @@ Todos
 =====
 
 Content
-* obv. Lorem ipsums
+* sections text+img
+* hero bgs
 * images cropping
 * favicon
 * logos ?
@@ -11,11 +12,9 @@ Content
 * OSM layer
 * posts: festival, vide-dressing, four pizza, marché artisans
 
-Urls
-* residences-artistiques > residences-artistiques-en-normandie
 
 Responsive
-* media queries breakpoints are 100% random for now, some cleaning to do
+* media queries breakpoints are 90% random for now, some cleaning to do
 * h1 titles need finer re-sizing
 
 Design
@@ -40,21 +39,15 @@ Posts (actualites etc.)
 Gallery
 * bxslider ?
 
-Build
-* it's shitty, but it works
 
 Admin
 * current csv <-> json is beyond broken and nothing more than a quick PoC
 * cache buster
 * agenda(s)
-* [done?] update via API (https://stackoverflow.com/questions/23971481/post-to-github-v3-api-using-ajax-and-javascript-fails-with-a-http-404/23974430#23974430)
+* img uploads via API (https://stackoverflow.com/questions/23971481/post-to-github-v3-api-using-ajax-and-javascript-fails-with-a-http-404/23974430#23974430)
 * onpage preview & update ? localStorage fiddle/save then API commit/push ?
-
-ghCMS
 * UX validation confirm
 * Edition mode localstorage for immediate perceived updated
-* html instructions
-* html editor
 * merge checkCredentials & fetchEdits ?
 
 "Backend"
@@ -67,21 +60,11 @@ ghCMS
 Clean up
 * br/ : check for spaces presence
 * images compression
-* lazy load bg url()
+* lazy load bg url() (not heros)
 * graceful degradation
 * prefetch
 * critical css
+* minify
 * fix #hero2 bullshit on homepage
-* remove jquery
+* replace zepto ?
 	https://github.com/franciscop/umbrella/blob/master/jquery.md
-
-
-Run dev
-=======
-
-    cd chapelmele
-    ./dev.sh & ./bdev.sh &>/dev/null & ./dev.sh
-
-Should be running on localhost:8000, with src/sass and src/html being built continuously
-
-DO NOT edit css files directly, or html outside of /src/
