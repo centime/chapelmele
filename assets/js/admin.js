@@ -21,7 +21,7 @@ function connexion(){
 function deconnexion(){
   localStorage['ghCMSCredentials-' + document.domain] = '';
   localStorage['ghCMSEditor-' + document.domain] = "disabled";
-  location = location;
+  location = '/';
 }
 
 function saveGhCMSCreedentials(u, t){
@@ -33,7 +33,7 @@ function saveGhCMSCreedentials(u, t){
 }
 function activateEditorMode(){
   localStorage['ghCMSEditor-' + document.domain] = "enabled";
-  location = location;
+  location = '/';
 }
 
 $(document).ready(init);

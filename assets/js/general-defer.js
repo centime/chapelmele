@@ -37,14 +37,16 @@ $(document).ready(function(){
   parallax();
 });
 async function fetchEdits(){
-  const pageLocation = document.location.pathname + document.location.search;
-  
+
   var jsonUrl;
   if (document.domain === "localhost"){
     jsonUrl = '/assets/js/edits.json'
   } else {
     jsonUrl = '//data.chapelmele.com/edits.json'
   }
+
+  const pageLocation = document.location.pathname + document.location.search;
+  
   const response = await fetch(jsonUrl);
   edits = await response.json();
 
