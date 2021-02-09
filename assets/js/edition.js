@@ -56,13 +56,19 @@ async function checkCredentials(){
     owner: ghCMSCredentials.owner,
     repo: ghCMSCredentials.repo,
     path: 'edits.json'
+  }).then(r => {
+    console.log('Valid ghCMS credentials');
+    console.log(r);
+    editsSha = r.data.sha;
+    if (!ghCMSCredentials.confirmed) {
+      localStorage['ghCMSCredentials-' + document.domain] = JSON.stringify({...ghCMSCredentials, ...{confirmed: true}});
+    }
   }).catch(error => {
     alert("Invalid editor credentials: " + error);
     localStorage['ghCMSEditor-' + document.domain] = "disabled";
     location = location;
   })
-  console.log('Valid ghCMS credentials');
-  editsSha = response.data.sha;
+
 }
 
 function displayPanel(){
@@ -173,7 +179,7 @@ function validateEdit(){
     'text': newContent,
   };
 
-  let commitMsg = '[gc-' + ghCMSCredentials.user + '] ' + pageLocation.substr(-35) + '#' + targetEl + ' - ' + pageLocation;
+  let commitMsg = '[' + ghCMSCredentials.user + '] ...' + pageLocation.substr(-35) + '#' + targetEl + ' - ' + pageLocation;
 
   if (env == 'dev') { 
     prompt(commitMsg, JSON.stringify(edits));

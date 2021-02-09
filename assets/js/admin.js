@@ -5,7 +5,8 @@
 function init(){
   $('#connexion').on('click', connexion);
   $('#deconnexion').on('click', deconnexion);
-  (localStorage['ghCMSEditor-' + document.domain] == 'enabled')? displayEditorSection():0;
+  try { JSON.parse(localStorage['ghCMSCredentials-' + document.domain]).confirmed? displayEditorSection():0;}
+  catch {}
 }
 
 function connexion(){
@@ -26,7 +27,8 @@ function deconnexion(){
 function saveGhCMSCreedentials(u, t){
   localStorage['ghCMSCredentials-' + document.domain] = JSON.stringify({
     'token': t,
-    'user': u
+    'user': u,
+    'confirmed': false
   });
 }
 function activateEditorMode(){
