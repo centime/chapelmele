@@ -1,1 +1,0 @@
-watch -n1 ./build.sh

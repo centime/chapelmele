@@ -54,6 +54,7 @@ function displayPanel(){
   Les mises à jour mettent quelques dizaines de secondes à apparaître.
   <input></input>
   <textarea></textarea>
+  <button class="demo">démo de formatage</button>
   <button class="cancel">Annuler</button>
   <button class="validate">Valider</button>
 </div>
@@ -62,11 +63,24 @@ function displayPanel(){
   initPanel();
 }
 
+function mdDemo(){
+  $('#ghCMS-editor-panel textarea').val(`un retour
+
+à la ligne
+
+**gras**, *italique*, [lien vers](https://chapelmele.com)
+
+* liste
+* de trucs`);
+  visualizeEdit()
+}
+
 function initPanel(){
   let $panel = $('#ghCMS-editor-panel');
   $panel.find('.close').on('click', disableEditorMode);
   $panel.find('.minimize').on('click', ()=>($panel.toggleClass('mini maxi')));
   $panel.find('textarea').on('keyup', visualizeEdit);
+  $panel.find('.demo').on('click', mdDemo);
   $panel.find('.cancel').on('click', cancelEdit);
   $panel.find('.validate').on('click', validateEdit);
 }
