@@ -38,8 +38,14 @@ $(document).ready(function(){
 });
 async function fetchEdits(){
   const pageLocation = document.location.pathname + document.location.search;
-  // const response = await fetch("//data.chapelmele.com/edits.json");
-  const response = await fetch("/assets/js/edits.json");
+  
+  var jsonUrl;
+  if (document.domain === "localhost"){
+    jsonUrl = '/assets/js/edits.json'
+  } else {
+    jsonUrl = '//data.chapelmele.com/edits.json'
+  }
+  const response = await fetch(jsonUrl);
   edits = await response.json();
 
   if (edits[pageLocation]) {
