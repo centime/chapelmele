@@ -10,17 +10,31 @@ try {
 } catch {
   alert("Undefined editor credentials");
   localStorage['ghCMSEditor-' + document.domain] = "disabled";
+  location = location;
 }
-const ghCMSCredentials = JSON.parse(localStorage['ghCMSCredentials-' + document.domain]);
+const ghCMSCredentials = {
+  ...JSON.parse(localStorage['ghCMSCredentials-' + document.domain]),
+  ...{
+    remote: '//data.chapelmele.com',
+    owner: 'chapelmele',
+    repo: 'website'
+  }
+};
+console.log(ghCMSCredentials.test)
 const pageLocation = document.location.pathname + document.location.search;
 var env, remote;
 var edits, editsSha;
 
+if (document.domain === "localhost"){
+  env = 'dev';
+  remote = '/assets/js/';
+} else {
+  env = 'prod';
+  remote = "//" + ghCMSCredentials.remote;
+}
 
-// env = 'prod';
-// remote = "//" + ghCMSCredentials.remote;
-env = 'dev';
-remote = '/assets/js/';
+  // env = 'prod';
+  // remote = "//" + ghCMSCredentials.remote;
 
 
 import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
@@ -45,6 +59,7 @@ async function checkCredentials(){
   }).catch(error => {
     alert("Invalid editor credentials: " + error);
     localStorage['ghCMSEditor-' + document.domain] = "disabled";
+    location = location;
   })
   console.log('Valid ghCMS credentials');
   editsSha = response.data.sha;
@@ -137,21 +152,33 @@ function validateEdit(){
   if (!resp) { return }
 
   const targetEl = $('#ghCMS-editor-panel input').val();
-  const newContent = mdConverter.makeHtml($('#ghCMS-editor-panel textarea').val());
+  const newContent = preSanitize(mdConverter.makeHtml($('#ghCMS-editor-panel textarea').val()));
 
-  edits[pageLocation] = edits[pageLocation] || {};
-  // todo: tofix: I shouldn't have to do this to get around accentuated chars...
-  try {
-    edits[pageLocation][targetEl] = btoa(encodeURIComponent(newContent));
-  } catch {
-    prompt('Une erreur est survenue, merci de transférer ce texte à Vincent', newContent);
-    return
+  function preSanitize(str){
+    // just so we don't urlencode too often, and save some kb
+    return str.replace('…','...').replace('’',"'").replace('œ','oe')
   }
+  edits[pageLocation] = edits[pageLocation] || {};
+
+  var b64 = 'error';
+  try {
+    b64 = btoa(newContent);
+  } catch {
+    try { b64 = btoa(encodeURIComponent(newContent)); }
+    catch { prompt('Une erreur est survenue, merci de transférer ce texte à Vincent', newContent); return }
+  }
+
+  edits[pageLocation][targetEl] = {
+    'b64': b64,
+    'text': newContent,
+  };
+
+  let commitMsg = '[gc-' + ghCMSCredentials.user + '] ' + pageLocation.substr(-35) + '#' + targetEl + ' - ' + pageLocation;
+
   if (env == 'dev') { 
-    prompt('New json:', JSON.stringify(edits));
+    prompt(commitMsg, JSON.stringify(edits));
   }
   if (env == 'prod') { 
-    let commitMsg = '[ghcms-edit] ' + pageLocation + '#' + targetEl;
     uploadEdits(commitMsg, edits).then(()=>{
       location = location;
     });

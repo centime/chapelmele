@@ -45,7 +45,7 @@ async function fetchEdits(){
   if (edits[pageLocation]) {
     for (let e in edits[pageLocation]){
       let $target = $('.' + e);
-      let newContent = decodeURIComponent(atob(edits[pageLocation][e]));
+      let newContent = decodeURIComponent(atob(edits[pageLocation][e].b64));
       $target.html(newContent);
     }
   }
