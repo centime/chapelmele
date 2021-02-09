@@ -2,12 +2,12 @@
 
 Petite présentation de ma création, et pourquoi c'est mieux que les autres options (pour Chapelmele).
 
-## Petit tour des différentes options
+## Petit tour des options concurrentes
 
 Contrairement à Wordpress ou Wix (les 2 autres options les plus évidentes), chapelmele.com est un site statique.
 
 
-> Site statique : les pages du site ne sont pas modifiable par des utilisateurs. 
+> Site statique : les pages du site ne sont pas modifiables par des utilisateurs. 
 > 
 > Le site est donc rempli et mis à jour par l'administrateur qui le fait depuis son poste de travail. Une fois le site mis à jour sur l'ordinateur de l'administrateur, celui-ci devra être envoyé sur le site via FTP. 
 > 
@@ -72,7 +72,7 @@ Best of both worlds ?
 
 ## Performances
 
-Et là on arrive dans les parties où le site statique va dominer incontestablement.
+Et là on arrive dans les parties où le site statique va dominer incontestablement (avec quelques efforts de ma part hein):
 
 
 ![screenshot google pagespeed insight 98%](https://raw.githubusercontent.com/centime/chapelmele/main/readme-imgs/pagespeedinsight-98-2021-02-09.png "google pagespeed insight 98%")
@@ -85,7 +85,7 @@ Ces scores reflètent les performances d'un site selon tout un tas de critères.
 * [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fchapelmele.com%2F&tab=mobile)
 * [GTmetrix Performance Report](https://gtmetrix.com/reports/chapelmele.com/5gsIf3SK/)
 
-Vous pouvez vous en foutre, mais les visiteurs pas trop, moi pas du tout, et faire de l'informatique performante c'est ma manière de luter contre l'obsolescence programmée. Même votre grand-mêre avec son ordi d'il y a 12 ans a le droit à une naviguation fluide et agréable.
+Vous pouvez vous en foutre, mais les visiteurs pas trop, moi pas du tout. Outre ma fierté d'informaticien, faire de l'informatique performante c'est ma manière de luter contre l'obsolescence programmée. Même votre grand-mêre avec son ordi d'il y a 12 ans a le droit à une naviguation fluide et agréable.
 
 Un autre qui ne s'en fout pas, c'est Google, qui en fait un critère d'évaluation pour le point suivant...
 
