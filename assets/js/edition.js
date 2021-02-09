@@ -4,6 +4,14 @@
 // ghCMS v0.2
 // github.com/centime/ghcms
 
+if (document.domain === "localhost"){
+  env = 'dev';
+  remote = '/assets/js/';
+} else {
+  env = 'prod';
+  remote = "//" + ghCMSCredentials.remote;
+}
+
 
 try {
   JSON.parse(localStorage['ghCMSCredentials-' + document.domain]);
@@ -24,17 +32,6 @@ console.log(ghCMSCredentials.test)
 const pageLocation = document.location.pathname + document.location.search;
 var env, remote;
 var edits, editsSha;
-
-if (document.domain === "localhost"){
-  env = 'dev';
-  remote = '/assets/js/';
-} else {
-  env = 'prod';
-  remote = "//" + ghCMSCredentials.remote;
-}
-
-  // env = 'prod';
-  // remote = "//" + ghCMSCredentials.remote;
 
 
 import { Octokit } from "https://cdn.skypack.dev/@octokit/core";

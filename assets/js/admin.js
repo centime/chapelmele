@@ -1,7 +1,5 @@
 
 
-// <p><a href="https://github.com/chapelmele/website/commits/master" target="_blank">Liste des modifications</a></p>  
-
 function init(){
   $('#connexion').on('click', connexion);
   $('#deconnexion').on('click', deconnexion);

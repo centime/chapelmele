@@ -294,10 +294,13 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url("/assets/img/home/chapelle-neige.jpg");
-  background-size: cover;
+  background: url("/assets/img/home/chapelle-neige-370x540.jpg");
+  background-size: cover !important;
   height: 80vh;
   width: 100vw; }
+  @media (min-width: 770px) {
+    #hero {
+      background: url("/assets/img/home/chapelle-neige.jpg"); } }
   #hero h1 {
     position: relative;
     z-index: 1;
