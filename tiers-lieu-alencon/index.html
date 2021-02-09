@@ -197,11 +197,16 @@
     <script defer src="/assets/js/general-defer.js"></script>
 
     <!-- page-specific scripts -->
-    <script>(''+window.location).indexOf('/agenda/')>0 ? document.write('<script defer src="/assets/js/fullCalendar.js"><\/script><script defer src="/assets/js/progCalendar.js"><\/script><script defer src="/assets/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/assets/css/fullCalendar.css">') : 0</script>
-    <script>(''+window.location).indexOf('/actualites/')>0 ? document.write('<script async defer src="/assets/js/actualites.js"><\/script>') : 0</script>
-    <script>(''+window.location).indexOf('/admin/')>0 ? document.write('<script async defer src="/assets/js/admin.js"><\/script>') : 0</script>
+    <script>
+      function onPage(path){ return (''+window.location).indexOf(path)>0 }
+      function loadJS(filename){document.write('<script defer src="/assets/js/' + filename + '"><\/script>')}
+      function loadCSS(filename){document.write('<link rel="stylesheet" href="/assets/css/' + filename + '">')}
+      onPage('/actualites/')? loadJS('actualites.js'):
+      onPage('/agenda/')? loadJS('agenda.js')+loadCSS('fullCalendar.css'):
+      onPage('/admin/')? loadJS('admin.js'):0;
+    </script>
 
     <!-- mode-specific scripts -->
-    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script defer src="/assets/js/showdown.js"><\/script><script async type="module" src="/assets/js/ghcms.js"><\/script>'): 0</script>
+    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script async type="module" src="/assets/js/edition.js"><\/script>'): 0</script>
   </body>
 </html>
