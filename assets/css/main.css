@@ -948,6 +948,7 @@ footer {
   position: fixed;
   width: 25%;
   height: 80%;
+  min-width: 300px;
   background: white;
   border: 5px solid grey;
   border-radius: 10px;

@@ -193,14 +193,15 @@ potagers, un jardin en permaculture, des arbres fruitiers, un accès à la petit
         <p class="credit"><a href="http://centime.fr">Vincent Delaunay</a>, 2021</p>
       </div>
     </footer>
-    <script src="/assets/js/zepto.min.js"></script>
-    <!-- <script src="/assets/js/jquery.min.js"></script> -->
-    <script async src="/assets/js/parallax-hero.js"></script>
-    <script async src="/assets/js/ghcms-edits.js"></script>
-    <script>(''+window.location).indexOf('/agenda/')>0 ? document.write('<script src="/assets/js/fullCalendar.js"><\/script><script async src="/assets/js/progCalendar.js"><\/script><\/script><script async src="/assets/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/assets/css/fullCalendar.css">') : 0</script>
-    <script>(''+window.location).indexOf('/actualites/')>0 ? document.write('<script async src="/assets/js/actualites.js"><\/script>') : 0</script>
-    <script>(''+window.location).indexOf('/admin/')>0 ? document.write('<script async src="/assets/js/admin.js"><\/script>') : 0</script>
-    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script src="/assets/js/showdown.js"><\/script><script type="module" src="/assets/js/ghcms.js"><\/script>'): 0</script>
-    <script async defer src="/assets/js/deferIframes.js"></script>
+    <!-- general scripts -->
+    <script defer src="/assets/js/general-defer.js"></script>
+
+    <!-- page-specific scripts -->
+    <script>(''+window.location).indexOf('/agenda/')>0 ? document.write('<script defer src="/assets/js/fullCalendar.js"><\/script><script defer src="/assets/js/progCalendar.js"><\/script><script defer src="/assets/js/fullCalendar-fr.js"><\/script><link rel="stylesheet" href="/assets/css/fullCalendar.css">') : 0</script>
+    <script>(''+window.location).indexOf('/actualites/')>0 ? document.write('<script async defer src="/assets/js/actualites.js"><\/script>') : 0</script>
+    <script>(''+window.location).indexOf('/admin/')>0 ? document.write('<script async defer src="/assets/js/admin.js"><\/script>') : 0</script>
+
+    <!-- mode-specific scripts -->
+    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script defer src="/assets/js/showdown.js"><\/script><script async type="module" src="/assets/js/ghcms.js"><\/script>'): 0</script>
   </body>
 </html>
