@@ -17,10 +17,10 @@ var env, remote;
 var edits, editsSha;
 
 
-env = 'prod';
-remote = "//" + ghCMSCredentials.remote;
-// env = 'dev';
-// remote = '/assets/js/';
+// env = 'prod';
+// remote = "//" + ghCMSCredentials.remote;
+env = 'dev';
+remote = '/assets/js/';
 
 
 import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
@@ -115,7 +115,7 @@ function getGhCmsId($e){
 }
 
 function loadToPanel(ghCmsId){
-  // todo: check if there are several identic ghCmsId on this page. That would break stuff
+  if ($('.'+ghCmsId).length != 1){alert('Impossible de modifier cette page, contacter Vincent'); return}
   $('#ghCMS-editor-panel input').val(ghCmsId);
   $('#ghCMS-editor-panel textarea').val(mdConverter.makeMarkdown($('.'+ghCmsId).html()));
   $('#ghCMS-editor-panel').removeClass('mini').addClass('maxi');
@@ -141,16 +141,23 @@ function validateEdit(){
 
   edits[pageLocation] = edits[pageLocation] || {};
   // todo: tofix: I shouldn't have to do this to get around accentuated chars...
-  edits[pageLocation][targetEl] = btoa(newContent);
-
+  try {
+    edits[pageLocation][targetEl] = btoa(encodeURIComponent(newContent));
+  } catch {
+    prompt('Une erreur est survenue, merci de transférer ce texte à Vincent', newContent);
+    return
+  }
   if (env == 'dev') { 
     prompt('New json:', JSON.stringify(edits));
   }
   if (env == 'prod') { 
     let commitMsg = '[ghcms-edit] ' + pageLocation + '#' + targetEl;
-    uploadEdits(commitMsg, edits);
+    uploadEdits(commitMsg, edits).then(()=>{
+      location = location;
+    });
   }
-
+  $('#ghCMS-editor-panel').toggleClass('mini maxi');
+  
 }
 
 async function uploadEdits(msg, obj){
