@@ -237,6 +237,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2; }
 
 p, .bloc-text div {
+  color: #343434;
   margin: 0 0 10px 0;
   text-align: justify;
   font-size: 14px; }
@@ -273,6 +274,9 @@ h2 {
 
 .underlined {
   border-bottom: 1px solid rgba(17, 17, 17, 0.15) !important; }
+
+a {
+  color: #130036; }
 
 body {
   background-color: white;

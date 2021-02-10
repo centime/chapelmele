@@ -20,24 +20,23 @@ $(document).ready(function(){
     });
   }
 
-  var heroHeight = $hero.css('height').replace('px','');
-
-  function easeInHeader(scrolled){
-    var diff = scrolled - heroHeight;
-    $hTitle.css('opacity', (diff*.00175));
-    $header.css('background-color', "rgb(255,255,255,"+(diff*.00175)+")");
+  var userScrolledCoef = 0;
+  function easeInHeader(){
+    if (userScrolledCoef <= 1) userScrolledCoef += .02;
+    $hTitle.css('opacity', userScrolledCoef);
+    $header.css('background-color', "rgb(255,255,255,"+userScrolledCoef+")");
   }
 
-  function parallax(header=true){
+  function parallax(){
     var scrolled = $(window).scrollTop();
     hero(scrolled);
-    if (header) {easeInHeader(scrolled)};
+    easeInHeader();
   };
   
-  parallax(false);
+  parallax();
   $('header .nav a').on('click', ()=>{
     $('#nav-panel-checkbox').prop('checked', false);
-    // easeInHeader(0);
+    userScrolledCoef = 0;
   });
 });
 async function fetchEdits(){

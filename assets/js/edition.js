@@ -188,7 +188,7 @@ function validateEdit(){
     // 'text': newContent,
   };
 
-  let commitMsg = '[' + ghCMSCredentials.user + '] ...' + pageLocation.substr(-35) + '#' + targetEl + ' - ' + pageLocation;
+  let commitMsg = '[' + ghCMSCredentials.user + '] ...' + pageLocation.substr(-35) + '#' + targetEl.split('-')[1] + ' - ' + pageLocation;
 
   if (env == 'dev') { 
     prompt(commitMsg, JSON.stringify(edits));
