@@ -175,16 +175,16 @@ function validateEdit(){
   }
   edits[pageLocation] = edits[pageLocation] || {};
 
-  var b64 = 'error';
-  try {
-    b64 = btoa(newContent);
-  } catch (_) {
-    try { b64 = btoa(encodeURIComponent(newContent)); }
-    catch (_) { prompt('Une erreur est survenue, merci de transférer ce texte à Vincent', newContent); return }
-  }
+  // var b64 = 'error';
+  // try {
+  //   b64 = btoa(newContent);
+  // } catch (_) {
+  //   try { b64 = btoa(encodeURI(newContent).replaceAll('%20',' ')); }
+  //   catch (_) { prompt('Une erreur est survenue, merci de transférer ce texte à Vincent', newContent); return }
+  // }
 
   edits[pageLocation][targetEl] = {
-    'b64': b64
+    'b64': btoa(encodeURI(newContent).replaceAll('%20',' '))
     // 'text': newContent,
   };
 
