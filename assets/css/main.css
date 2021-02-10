@@ -775,6 +775,21 @@ footer {
       padding: 20px; }
     footer .credit {
       bottom: -10px; } }
+  footer #logos {
+    display: flex; }
+    footer #logos ul {
+      margin: 0 auto;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style: none; }
+      footer #logos ul li {
+        padding: 10px; }
+    footer #logos img {
+      height: 50px; }
+      footer #logos img.petits-chatelets {
+        height: 70px; }
 
 #three-slide {
   height: 600px; }
