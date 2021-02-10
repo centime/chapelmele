@@ -73,11 +73,11 @@ function displayPanel(){
   const $panel = $(`
 <div id="ghCMS-editor-panel" class="mini">
   <h2>Mode Edition <button class="close">X</button><button class="minimize">+-</button></h2>
-  Les mises à jour mettent quelques dizaines de secondes à apparaître.
   <input></input>
   <textarea></textarea>
   <button class="demo">démo de formatage</button>
   <button class="cancel">Annuler</button>
+  <a href="https://github.com/chapelmele/website/commits/master" target="_blank">Vérifier que votre modif a été recue</a>
   <button class="validate">Valider</button>
 </div>
   `);
@@ -189,9 +189,9 @@ function validateEdit(){
   }
   if (env == 'prod') { 
     uploadEdits(commitMsg, edits).then(()=>{
+      location = location;
     });
   }
-  location = location;
   
 }
 
