@@ -28,13 +28,13 @@ $(document).ready(function(){
     $header.css('background-color', "rgb(255,255,255,"+(diff*.00175)+")");
   }
 
-  function parallax(){
+  function parallax(header=true){
     var scrolled = $(window).scrollTop();
     hero(scrolled);
-    easeInHeader(scrolled);
+    if (header) {easeInHeader(scrolled)};
   };
   
-  parallax();
+  parallax(false);
 });
 async function fetchEdits(){
 
