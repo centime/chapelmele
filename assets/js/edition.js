@@ -30,6 +30,10 @@ if (document.domain === "localhost"){
   remote = "//" + ghCMSCredentials.remote;
 }
 
+
+  env = 'prod';
+  remote = "//" + ghCMSCredentials.remote;
+
 const pageLocation = document.location.pathname + document.location.search;
 var env, remote;
 var edits, editsSha;
@@ -72,12 +76,14 @@ async function checkCredentials(){
 function displayPanel(){
   const $panel = $(`
 <div id="ghCMS-editor-panel" class="mini">
-  <h2>Mode Edition <button class="close">X</button><button class="minimize">+-</button></h2>
+  <h2>Admin
+    <a href="https://github.com/chapelmele/website/commits/master" target="_blank">Edits<br/> enregistrés</a>
+    <button class="close">X</button><button class="minimize">+-</button>
+  </h2>
   <input></input>
   <textarea></textarea>
   <button class="demo">démo de formatage</button>
   <button class="cancel">Annuler</button>
-  <a href="https://github.com/chapelmele/website/commits/master" target="_blank">Vérifier que votre modif a été recue</a>
   <button class="validate">Valider</button>
 </div>
   `);
@@ -178,7 +184,7 @@ function validateEdit(){
   }
 
   edits[pageLocation][targetEl] = {
-    'b64': b64,
+    'b64': b64
     // 'text': newContent,
   };
 
@@ -192,6 +198,7 @@ function validateEdit(){
       location = location;
     });
   }
+  $('#ghCMS-editor-panel').toggleClass('maxi mini');
   
 }
 

@@ -667,17 +667,16 @@ header {
     padding-left: 180px;
     z-index: 100;
     display: block !important;
-    line-height: 0.7em;
+    line-height: 1.2em;
     float: right;
     margin-right: 80px;
     padding: 0px;
     position: relative;
-    top: 13px;
     text-decoration: underline; }
     @media (max-width: 770px) {
       header #header-title {
         font-size: 2em;
-        line-height: 1.3em; } }
+        line-height: 1.8em; } }
 
 footer {
   position: relative;
@@ -972,8 +971,14 @@ footer {
     height: 80%; }
   #ghCMS-editor-panel * {
     font-family: arial, serif; }
+  #ghCMS-editor-panel h2 a {
+    display: inline-block;
+    width: 80px;
+    font-size: 17px; }
   #ghCMS-editor-panel h2 button {
-    float: right; }
+    float: right;
+    padding: 0px;
+    width: 50px; }
   #ghCMS-editor-panel input {
     display: none; }
   #ghCMS-editor-panel textarea {
