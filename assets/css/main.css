@@ -294,13 +294,13 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url("/assets/img/home/chapelle-neige-370x540.jpg");
-  background-size: cover !important;
+  background-image: url("/assets/img/home/chapelle-neige-370x540.jpg");
+  background-size: cover;
   height: 80vh;
   width: 100vw; }
   @media (min-width: 770px) {
     #hero {
-      background: url("/assets/img/home/chapelle-neige.jpg"); } }
+      background-image: url("/assets/img/home/chapelle-neige.jpg"); } }
   #hero h1 {
     position: relative;
     z-index: 1;
@@ -813,6 +813,10 @@ footer {
     #three-slide {
       height: 50vw;
       min-height: 50vw; } }
+
+@media (min-width: 770px) {
+  #tiers-lieu-alencon #hero {
+    background-image: url(/assets/img/tiers-lieu-alencon/cour-chatelets-vue-aerienne.jpg) !important; } }
 
 #lieu-petits-chatelets-presentation .bloc-pic {
   width: 65%;

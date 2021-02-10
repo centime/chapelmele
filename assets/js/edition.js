@@ -15,7 +15,7 @@ if (document.domain === "localhost"){
 
 try {
   JSON.parse(localStorage['ghCMSCredentials-' + document.domain]);
-} catch {
+} catch (_) {
   alert("Undefined editor credentials");
   localStorage['ghCMSEditor-' + document.domain] = "disabled";
   location = location;
@@ -166,9 +166,9 @@ function validateEdit(){
   var b64 = 'error';
   try {
     b64 = btoa(newContent);
-  } catch {
+  } catch (_) {
     try { b64 = btoa(encodeURIComponent(newContent)); }
-    catch { prompt('Une erreur est survenue, merci de transférer ce texte à Vincent', newContent); return }
+    catch (_) { prompt('Une erreur est survenue, merci de transférer ce texte à Vincent', newContent); return }
   }
 
   edits[pageLocation][targetEl] = {
