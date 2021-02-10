@@ -4,13 +4,6 @@
 // ghCMS v0.2
 // github.com/centime/ghcms
 
-if (document.domain === "localhost"){
-  env = 'dev';
-  remote = '/assets/js/';
-} else {
-  env = 'prod';
-  remote = "//" + ghCMSCredentials.remote;
-}
 
 
 try {
@@ -28,7 +21,15 @@ const ghCMSCredentials = {
     repo: 'website'
   }
 };
-console.log(ghCMSCredentials.test)
+
+if (document.domain === "localhost"){
+  env = 'dev';
+  remote = '/assets/js/';
+} else {
+  env = 'prod';
+  remote = "//" + ghCMSCredentials.remote;
+}
+
 const pageLocation = document.location.pathname + document.location.search;
 var env, remote;
 var edits, editsSha;
