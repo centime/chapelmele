@@ -51,7 +51,7 @@ Il y a bien le nom de domaine (chapelmele.com) à louer, mais c'est inévitable 
 
 * [wix](https://www.wix.com/upgrade/website) (domaine perso, pas de pub, limitations diverses): 10€50/mois
 
-* [wordpress.com](https://wordpress.com/pricing/) (hébergement nu): 4€/mois
+* [wordpress chez ovh](https://www.ovh.com/world/web-hosting/website/wordpress.xml): 4€/mois
 
 
 ## Fonctionnalités sur mesure
@@ -85,6 +85,8 @@ Ces scores reflètent les performances d'un site selon tout un tas de critères.
 * [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fchapelmele.com%2F&tab=mobile)
 * [GTmetrix Performance Report](https://gtmetrix.com/reports/chapelmele.com/5gsIf3SK/)
 
+Je laisse les curieux chercher un Wix ou Wordpress avec des scores comparables :)
+
 Vous pouvez vous en foutre, mais les visiteurs pas trop, moi pas du tout. Outre ma fierté d'informaticien, faire de l'informatique performante c'est ma manière de luter contre l'obsolescence programmée. Même votre grand-mêre avec son ordi d'il y a 12 ans a le droit à une naviguation fluide et agréable.
 
 Un autre qui ne s'en fout pas, c'est Google, qui en fait un critère d'évaluation pour le point suivant...
@@ -97,16 +99,18 @@ C'est cool d'avoir un site, c'est mieux s'il est lu. Pour ça, le mieux c'est d'
 Je vais pas faire un cours là-dessus ici, mais pour le SEO (Search Engine Optimization) la simplicité, la flexibilité, et les perfs d'un site statique sont imbattables.
 
 
-## Sécurité
+## Sécurité et vie privée
 
-Sans logiciel, pas de bug. Sans bug, pas de vulnérabilité. Vous avez un mot de passe pour les modifs, tant que vous le perdez pas entre de mauvaises mains il n'y aura jamais la moindre tentative de hack.
+Sans logiciel, pas de bug. Sans bug, pas de vulnérabilité. Vous avez un mot de passe pour les modifs, faut pas le perdre entre de mauvaises mains, mais vous êtes à l'abri d'une attaque technique.
 
 ~~En fait, mieux qu'un mot de passe, vous avez un (plusieurs!) [token (privilèges limités, révocable, etc...)](https://en.wikipedia.org/wiki/Access_token)~~
+
+Niveau vie privée: pas de cookies, pas de tracking, rien de cette merde et donc pas de bandeau RGPD non plus.
 
 
 ## Conclusion
 
-[Ca m'a pris du temps](https://github.com/centime/chapelmele/commits/main), et [il me reste un paquet de trucs à faire](https://github.com/centime/chapelmele). Mais j'ai sincérement monté un truc vraiment cool, qui devrait vous servir, et Chapelmele, fidèlement.
+[Ca m'a pris du temps](https://github.com/centime/chapelmele/commits/main), et [il me reste un paquet de trucs à faire](https://github.com/centime/chapelmele#user-content-todos). Mais j'ai sincérement monté un truc vraiment cool, qui devrait vous servir, et Chapelmele, fidèlement.
 
 Le design ne rend pas forcément justice à l'élégance de l'architecture, mais c'est juste pas là-dedans que je suis bon, alors j'ai fait de mon mieux.
 

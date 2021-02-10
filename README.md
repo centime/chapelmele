@@ -4,12 +4,13 @@ Todos
 Content
 * sections text+img
 * hero bgs
+* "plan des chatelets"
 * images cropping
 * favicon
 * logos ?
 * social widgets ?
 * a/img alt/title
-* OSM layer
+* OSM layer ?
 * posts: festival, vide-dressing, four pizza, marché artisans
 
 
@@ -18,15 +19,17 @@ Responsive
 * h1 titles need finer re-sizing
 
 Design
+* some desktops get it tablet-looking, gotta find out why/how/fix
 * prevent pics distorsion
 * add parallax to .hera pics?
+* anchor links height offset
 
 Agendas
 * interactive events.json generator
 * rich event description display
 * prog/ateliers/dispos
 * concerts/spectacles/expos/repas ?
-* besoin de bénévoles ?
+* "besoin de bénévoles" ?
 * private ?
 * load #post first, then fullCalendar
 
@@ -41,10 +44,12 @@ Gallery
 
 
 Admin
+* edits.json linebreaks (for commit diffs)
+* bring actualites back
 * current csv <-> json is beyond broken and nothing more than a quick PoC
 * cache buster
 * agenda(s)
-* img uploads via API (https://stackoverflow.com/questions/23971481/post-to-github-v3-api-using-ajax-and-javascript-fails-with-a-http-404/23974430#23974430)
+* img uploads
 * onpage preview & update ? localStorage fiddle/save then API commit/push ?
 * UX validation confirm
 * Edition mode localstorage for immediate perceived updated
