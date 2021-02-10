@@ -413,6 +413,8 @@ section {
     margin: 0 auto; }
     section .bloc-link:hover {
       color: red; }
+  section .bloc-links-list {
+    display: flex; }
 
 @media (max-width: 1190px) {
   section.bloc-img-left .wrapper {
