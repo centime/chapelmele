@@ -422,6 +422,9 @@ section {
       color: red; }
   section .bloc-links-list {
     display: flex; }
+    @media (max-width: 770px) {
+      section .bloc-links-list {
+        flex-direction: column; } }
 
 @media (max-width: 1190px) {
   section.bloc-img-left .wrapper {
@@ -875,6 +878,8 @@ footer {
   #tiers-lieu-alencon #hero {
     background-image: url(/assets/img/tiers-lieu-alencon/cour-chatelets-vue-aerienne.jpg) !important; } }
 
+#lieu-petits-chatelets-presentation .wrapper {
+  max-width: 100%; }
 #lieu-petits-chatelets-presentation .bloc-pic {
   width: 65%;
   padding-right: 10px;
@@ -903,8 +908,10 @@ footer {
     width: 90%;
     display: flex;
     flex-direction: row; }
-    #collectif-petits-chatelets-presentation .wrapper .bloc-text h2, #collectif-petits-chatelets-presentation .wrapper .bloc-text p {
-      width: 50%; }
+    @media (min-width: 1190px) {
+      #collectif-petits-chatelets-presentation .wrapper .bloc-text h2, #collectif-petits-chatelets-presentation .wrapper .bloc-text div {
+        width: 45%;
+        margin: 0 auto; } }
     @media (max-width: 1190px) {
       #collectif-petits-chatelets-presentation .wrapper .bloc-text {
         flex-direction: column; }
