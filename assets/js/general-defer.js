@@ -22,7 +22,7 @@ $(document).ready(function(){
 
   var userScrolledCoef = 0;
   function easeInHeader(){
-    if (userScrolledCoef <= 1) userScrolledCoef += .02;
+    if (userScrolledCoef <= 1) userScrolledCoef += .03;
     $hTitle.css('opacity', userScrolledCoef);
     $header.css('background-color', "rgb(255,255,255,"+userScrolledCoef+")");
   }

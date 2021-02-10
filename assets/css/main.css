@@ -275,6 +275,9 @@ h2 {
 .underlined {
   border-bottom: 1px solid rgba(17, 17, 17, 0.15) !important; }
 
+.overlined {
+  border-top: 1px solid rgba(17, 17, 17, 0.15) !important; }
+
 a {
   color: #130036; }
 
@@ -579,18 +582,29 @@ section.bloc-right .placeholder {
     background: url(/assets/img/logos/menu.png); }
   .nav .nav-section {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    overflow-y: scroll;
+    right: 0;
+    left: 0;
+    max-height: 65%; }
   .nav ul {
     display: flex;
     flex-direction: row;
     padding: 0px;
     margin: 10px; }
-    @media (max-width: 400px) {
+    @media (max-width: 770px) {
       .nav ul {
         flex-direction: column; } }
+  .nav .main-menu li {
+    width: 100%; }
+    @media (min-width: 1190px) {
+      .nav .main-menu li a {
+        line-height: 3.5;
+        padding: 0; } }
   .nav li {
     position: relative;
-    width: 100%;
     text-align: center;
     border: none;
     background-color: white;
@@ -610,6 +624,8 @@ section.bloc-right .placeholder {
       text-decoration: none;
       transition: color 0.2s ease-in-out;
       justify-content: center; }
+  .nav #nav-panel-full-menu-in {
+    max-height: 100%; }
   .nav #nav-panel-full-menu-checkbox {
     display: none; }
   .nav .full-menu {
@@ -620,10 +636,21 @@ section.bloc-right .placeholder {
       border: none;
       padding-left: 5px; }
     .nav .full-menu ul {
-      margin: 0 auto;
+      margin: 0;
       flex-direction: column; }
+      @media (min-width: 1190px) {
+        .nav .full-menu ul {
+          margin: 0 auto; } }
       .nav .full-menu ul li a {
         text-align: left; }
+      @media (min-width: 1190px) {
+        .nav .full-menu ul.menu-chatelets {
+          display: flex;
+          flex-wrap: wrap;
+          height: 200px;
+          max-height: 100%; }
+          .nav .full-menu ul.menu-chatelets .list-bp {
+            margin-top: 30px; } }
   .nav .full-menu-option {
     width: 160px;
     min-width: 160px;
@@ -683,6 +710,16 @@ header {
       header #header-title {
         font-size: 2em;
         line-height: 1.8em; } }
+  header .myScrollableDiv {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    background: green;
+    color: #fff;
+    z-index: 1000; }
 
 footer {
   position: relative;
