@@ -179,7 +179,7 @@ function validateEdit(){
 
   edits[pageLocation][targetEl] = {
     'b64': b64,
-    'text': newContent,
+    // 'text': newContent,
   };
 
   let commitMsg = '[' + ghCMSCredentials.user + '] ...' + pageLocation.substr(-35) + '#' + targetEl + ' - ' + pageLocation;
