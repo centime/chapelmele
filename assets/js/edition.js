@@ -151,7 +151,12 @@ function cancelEdit(){
 }
 
 function validateEdit(){
-  let resp = confirm('Are you sure ?');
+  let resp = confirm(`>>>  !!   Les Modifs n' Apparaissent Pas Immédiatement   !!  <<<
+
+- C'est normal, soyez Patients, et ne Surchargez pas le système 
+
+- Essayez aussi de les Limiter en Nombre, donc Relisez bien avant de valider`);
+
   if (!resp) { return }
 
   const targetEl = $('#ghCMS-editor-panel input').val();
@@ -183,10 +188,9 @@ function validateEdit(){
   }
   if (env == 'prod') { 
     uploadEdits(commitMsg, edits).then(()=>{
-      location = location;
     });
   }
-  $('#ghCMS-editor-panel').toggleClass('mini maxi');
+  location = location;
   
 }
 
