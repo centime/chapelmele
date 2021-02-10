@@ -273,10 +273,10 @@ h2 {
       font-size: 30px; } }
 
 .underlined {
-  border-bottom: 1px solid rgba(17, 17, 17, 0.15) !important; }
+  border-bottom: 2px solid rgba(17, 17, 17, 0.15) !important; }
 
 .overlined {
-  border-top: 1px solid rgba(17, 17, 17, 0.15) !important; }
+  border-top: 2px solid rgba(17, 17, 17, 0.15) !important; }
 
 a {
   color: #130036; }
