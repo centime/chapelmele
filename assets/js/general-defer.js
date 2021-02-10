@@ -35,6 +35,10 @@ $(document).ready(function(){
   };
   
   parallax(false);
+  $('header .nav a').on('click', ()=>{
+    $('#nav-panel-checkbox').prop('checked', false);
+    // easeInHeader(0);
+  });
 });
 async function fetchEdits(){
 
