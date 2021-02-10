@@ -45,7 +45,7 @@ async function fetchEdits(){
     jsonUrl = '//data.chapelmele.com/edits.json'
   }
   
-    jsonUrl = '//data.chapelmele.com/edits.json'
+    // jsonUrl = '//data.chapelmele.com/edits.json'
 
   const pageLocation = document.location.pathname + document.location.search;
   

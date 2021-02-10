@@ -31,8 +31,8 @@ if (document.domain === "localhost"){
 }
 
 
-  env = 'prod';
-  remote = "//" + ghCMSCredentials.remote;
+  // env = 'prod';
+  // remote = "//" + ghCMSCredentials.remote;
 
 const pageLocation = document.location.pathname + document.location.search;
 var env, remote;
