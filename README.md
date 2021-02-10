@@ -63,6 +63,7 @@ Admin
 * open graph
 
 Clean up
+* h2+br -> h2+h3
 * br/ : check for spaces presence
 * images compression
 * lazy load bg url() (not heros)
