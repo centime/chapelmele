@@ -404,7 +404,7 @@ section {
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.15);
-    background-color: #efefef; }
+    background-color: #efefeff0; }
   section .bloc-link {
     min-width: 200px;
     border: 1px solid gray;
@@ -426,9 +426,11 @@ section {
       section .bloc-links-list {
         flex-direction: column; } }
 
-@media (max-width: 1190px) {
-  section.bloc-img-left .wrapper {
-    flex-direction: column; } }
+section.bloc-img-left .wrapper {
+  flex-flow: row-reverse; }
+  @media (max-width: 1190px) {
+    section.bloc-img-left .wrapper {
+      flex-direction: column; } }
 section.bloc-img-left .bloc-pic {
   order: 1; }
   @media (max-width: 1190px) {
@@ -436,6 +438,8 @@ section.bloc-img-left .bloc-pic {
       order: 3; } }
 section.bloc-img-left .bloc-text {
   order: 2; }
+section.bloc-img-left .bloc-pic, section.bloc-img-left img {
+  left: 0; }
 
 @media (max-width: 1190px) {
   section.bloc-img-right .wrapper {
@@ -444,10 +448,18 @@ section.bloc-img-right .bloc-pic {
   order: 2; }
 section.bloc-img-right .bloc-text {
   order: 1; }
+section.bloc-img-right .bloc-pic, section.bloc-img-right img {
+  right: 0; }
 
 section .bloc-pic {
-  width: 45%;
-  padding: 80px; }
+  width: 45%; }
+  @media (min-width: 1190px) {
+    section .bloc-pic {
+      overflow: hidden;
+      height: 100%;
+      min-height: 100%;
+      position: absolute;
+      right: 0; } }
   @media (max-width: 1190px) {
     section .bloc-pic {
       height: 250px;
@@ -457,7 +469,9 @@ section .bloc-pic {
       padding: 0px;
       margin-bottom: 40px; } }
   section .bloc-pic img {
-    width: 100%; }
+    height: 100%;
+    min-height: 100%;
+    position: absolute; }
     @media (max-width: 1190px) {
       section .bloc-pic img {
         min-width: 250px;
@@ -880,21 +894,6 @@ footer {
 
 #lieu-petits-chatelets-presentation .wrapper {
   max-width: 100%; }
-#lieu-petits-chatelets-presentation .bloc-pic {
-  width: 65%;
-  padding-right: 10px;
-  border-radius: 0px !important;
-  margin: 0 auto;
-  margin-top: 20px;
-  overflow: inherit !important;
-  display: flex; }
-  @media (max-width: 1190px) {
-    #lieu-petits-chatelets-presentation .bloc-pic {
-      order: 1;
-      width: 100%;
-      padding-right: 0px; } }
-  #lieu-petits-chatelets-presentation .bloc-pic img {
-    margin: 0 auto; }
 
 #collectif-petits-chatelets-presentation .wrapper {
   display: flex;
@@ -947,7 +946,7 @@ footer {
   margin-top: 20px; }
 
 #programmation {
-  background-color: #efefef;
+  background-color: #efefeff0;
   padding-top: 20px;
   display: flex;
   justify-content: center;
@@ -964,6 +963,10 @@ footer {
       z-index: 1000;
       width: 300px;
       height: 300px; }
+
+#actualites .content {
+  min-height: 400px;
+  height: 400px; }
 
 #collectif-des-petits-chatelets .resp-margin-top .wrapper {
   margin-top: 200px;

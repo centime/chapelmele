@@ -220,21 +220,6 @@
         <p class="credit"><a href="http://centime.fr">Vincent Delaunay</a>, 2021</p>
       </div>
     </footer>
-    <!-- general scripts -->
-    <!-- <script defer src="/assets/js/general-defer.js"></script> -->
-    <script defer src="/assets/js/general-dispatch.js"></script>
-
-    <!-- page-specific scripts --><!-- 
-    <script>
-      function onPage(path){ return (''+window.location).indexOf(path)>0 }
-      function loadJS(filename){document.write('<script defer src="/assets/js/' + filename + '"><\/script>')}
-      function loadCSS(filename){document.write('<link rel="stylesheet" href="/assets/css/' + filename + '">')}
-      onPage('/actualites/')? loadJS('actualites.js'):
-      onPage('/agenda/')? loadJS('agenda.js')+loadCSS('fullCalendar.css'):
-      onPage('/admin/')? loadJS('admin.js'):0;
-    </script> -->
-
-    <!-- mode-specific scripts -->
-<!--     <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script async type="module" src="/assets/js/edition.js"><\/script>'): 0</script>
- -->  </body>
+    <script defer="defer" async="async" async src="/assets/js/general-dispatch.js"></script>
+  </body>
 </html>
