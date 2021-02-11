@@ -1,11 +1,11 @@
 /* TEAM */           
 Dev: Vincent Delaunay         
+Email: dev@chapelmele.com
 Site: centime.fr
-Email: quelques.centimes@gmail.com
 Reddit: reddit.com/u/centime           
 Residence: France
 
-Editeur: Pierre Fourmeau
+Editeur: 
 					
 /* THANKS */							
 Tout le monde aux Petits Châtelets
@@ -13,7 +13,7 @@ Tout le monde aux Petits Châtelets
 /* SITE */
 Tech stack: Custom static       
 Sourcecode: github.com/centime/chapelmele
-Software: Sass, bash
+Software: ghcms, sass, js, python, bash
 Hosting: Github
 
                         

@@ -14356,7 +14356,7 @@ function init(){
     calendar.render();
 
     async function update(calendar){
-		var events = await $.get('/assets/js/test.json');
+		var events = await $.get('/assets/js/events.json');
 		calendar.addEventSource(events);
 		displayAnchoredEvent();
 		window.onhashchange = displayAnchoredEvent;

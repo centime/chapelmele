@@ -152,7 +152,7 @@
             <p><strong>Repair café, Recyclerie créative, ateliers vélos... et des outils partagés</strong> !</p>
             <p>Et bien sûr, <strong>les Jardins !</strong> Les Courts-Circuits s'en occupent, et désormais en partenariat avec Chapêlmêle.</p>
           </div>
-          <a class="bloc-link" href="http://les-courts-circuits.fr/">Le site des Courts Circuits</a>
+          <a class="bloc-link" target="_blank" href="http://les-courts-circuits.fr/">Le site des Courts Circuits</a>
         </div>
       </div>
       <div class="placeholder"></div>
@@ -167,7 +167,7 @@
               <p>Une AMAP, c'est une <strong>Association pour le Maintien d'une Agriculture Paysanne</strong>; un partenariat de proximité entre des consommateurs et des exploitations locales (élevages, maraichères, apicultrices etc...).</p>
               <p>Leur activité est indépendante des Petits Châtelets mais parfaitement en phase avec nos propres motivations, et <strong>nous sommes ravis de les accueillir toutes les semaines</strong>.</p>
             </div>
-          <a class="bloc-link" href="http://amapalencon.fr/">Le site de l'AMAP d'Alençon</a>
+          <a class="bloc-link" target="_blank" href="http://amapalencon.fr/">Le site de l'AMAP d'Alençon</a>
         </div>
       </div>
       <div class="placeholder"></div>
@@ -177,6 +177,7 @@
           <h3>Nous contacter:</h3>
           <p><a href="#">chapelmele@gmail.com</a></p>
           <p>41 chemin des Châtelets, 61000 Alençon</p>
+          <p>Entrée par le grand portail ouvert, le 41 étant l'entrée de la chapelle...</p>
         </div>
         <div id="access-map">
             <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="" data-src="https://www.openstreetmap.org/export/embed.html?bbox=0.06293535232543947%2C48.43437585276107%2C0.07709741592407228%2C48.44058978410332&amp;layer=mapnik&amp;marker=48.43748291343954%2C0.07001638412475586" style="border: 1px solid black"></iframe>
@@ -220,9 +221,10 @@
       </div>
     </footer>
     <!-- general scripts -->
-    <script defer src="/assets/js/general-defer.js"></script>
+    <!-- <script defer src="/assets/js/general-defer.js"></script> -->
+    <script defer src="/assets/js/general-dispatch.js"></script>
 
-    <!-- page-specific scripts -->
+    <!-- page-specific scripts --><!-- 
     <script>
       function onPage(path){ return (''+window.location).indexOf(path)>0 }
       function loadJS(filename){document.write('<script defer src="/assets/js/' + filename + '"><\/script>')}
@@ -230,9 +232,9 @@
       onPage('/actualites/')? loadJS('actualites.js'):
       onPage('/agenda/')? loadJS('agenda.js')+loadCSS('fullCalendar.css'):
       onPage('/admin/')? loadJS('admin.js'):0;
-    </script>
+    </script> -->
 
     <!-- mode-specific scripts -->
-    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script async type="module" src="/assets/js/edition.js"><\/script>'): 0</script>
-  </body>
+<!--     <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script async type="module" src="/assets/js/edition.js"><\/script>'): 0</script>
+ -->  </body>
 </html>

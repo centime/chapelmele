@@ -128,7 +128,6 @@
         <div class="bloc-text">
           <h2><strong>Ateliers</strong><br/> à domicile</h2>
           <div class="ghcms ghcms-3">
-            <div class="ghcms ghcms-4">
             <p>Découvrez la marqueterie à travers un atelier à domicile</p>
             <p>Comment ça marche&nbsp;? Un(e) hôte invite ses ami(e)s pour un moment agréable, intéressant et amusant à partager. </p>
             <p>Au programme&nbsp;: </p>
@@ -147,6 +146,7 @@
         <div class="bloc-pic"><img loading="lazy" src="/assets/img/tiers-lieu-alencon/atelier-litho.JPG" alt="Rassemblement à l'extérieur"></div>
         <div class="bloc-text">
           <h2><strong>Ma formation</strong><br/> de l'école à mon atelier d'aujourd'hui</h2>
+          <div class="ghcms ghcms-4">
             <p>
             bureau, salles polyvalentes, atelier vélo...<br/> 
             La plupart de ces espaces a été aménagée à fin d'activités artistiques et permettent une réelle pluridisciplinarité (<strong>salles de répétition, studio de musique, portique de cirque...</strong>). Le reste a été consacré à de confortables espaces de vie calmes ou collectifs.<br/> 
@@ -161,6 +161,7 @@
           <h3>Nous contacter:</h3>
           <p><a href="#">chapelmele@gmail.com</a></p>
           <p>41 chemin des Châtelets, 61000 Alençon</p>
+          <p>Entrée par le grand portail ouvert, le 41 étant l'entrée de la chapelle...</p>
         </div>
         <div id="access-map">
             <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="" data-src="https://www.openstreetmap.org/export/embed.html?bbox=0.06293535232543947%2C48.43437585276107%2C0.07709741592407228%2C48.44058978410332&amp;layer=mapnik&amp;marker=48.43748291343954%2C0.07001638412475586" style="border: 1px solid black"></iframe>
@@ -204,9 +205,10 @@
       </div>
     </footer>
     <!-- general scripts -->
-    <script defer src="/assets/js/general-defer.js"></script>
+    <!-- <script defer src="/assets/js/general-defer.js"></script> -->
+    <script defer src="/assets/js/general-dispatch.js"></script>
 
-    <!-- page-specific scripts -->
+    <!-- page-specific scripts --><!-- 
     <script>
       function onPage(path){ return (''+window.location).indexOf(path)>0 }
       function loadJS(filename){document.write('<script defer src="/assets/js/' + filename + '"><\/script>')}
@@ -214,9 +216,9 @@
       onPage('/actualites/')? loadJS('actualites.js'):
       onPage('/agenda/')? loadJS('agenda.js')+loadCSS('fullCalendar.css'):
       onPage('/admin/')? loadJS('admin.js'):0;
-    </script>
+    </script> -->
 
     <!-- mode-specific scripts -->
-    <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script async type="module" src="/assets/js/edition.js"><\/script>'): 0</script>
-  </body>
+<!--     <script>(localStorage['ghCMSEditor-' + document.domain])==="enabled" ? document.write('<script async type="module" src="/assets/js/edition.js"><\/script>'): 0</script>
+ -->  </body>
 </html>
