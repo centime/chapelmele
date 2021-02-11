@@ -35,7 +35,7 @@ if (document.domain === "localhost"){
 
 const pageLocation = document.location.pathname + document.location.search;
 var env, remote;
-var edits, editsSha;
+var edits, editsSha, editsAsCommited;
 
 
 import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
@@ -48,7 +48,7 @@ $(document).ready(()=>{
   checkCredentials()
   .then(displayPanel)
   .then(enableEditOptions)
-  .then(fetchEdits);
+  .then(updateAsCommited);
 });
 
 async function checkCredentials(){
@@ -61,6 +61,11 @@ async function checkCredentials(){
     console.log('Valid ghCMS credentials');
     console.log(r);
     editsSha = r.data.sha;
+    // todo fix remote file if not proper json
+    editsAsCommited = JSON.parse(r.data.content.split('\n').map((l)=>atob(l)).join(''));
+    console.log(editsAsCommited);
+    edits = editsAsCommited;
+
     if (!ghCMSCredentials.confirmed) {
       localStorage['ghCMSCredentials-' + document.domain] = JSON.stringify({...ghCMSCredentials, ...{confirmed: true}});
     }
@@ -201,7 +206,17 @@ async function uploadEdits(msg, obj){
   });
 }
 
-async function fetchEdits(){
-  const response = await fetch(remote + '/edits.json');
-  edits = await response.json();
+function updateAsCommited(){
+  if (env === 'dev') { return }
+  if (editsAsCommited[pageLocation]) {
+    for (let e in editsAsCommited[pageLocation]){
+      let $target = $('.' + e);
+      let newContent = decodeURI(atob(editsAsCommited[pageLocation][e].b64));
+      $target.html(newContent);
+    }
+  }
 }
+// async function fetchEdits(){
+//   const response = await fetch(remote + '/edits.json');
+//   edits = await response.json();
+// }
