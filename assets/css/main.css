@@ -281,6 +281,26 @@ h2 {
 a {
   color: #130036; }
 
+h2.fade-in {
+  transition: all 1.5s ease 0s; }
+  h2.fade-in.instant {
+    transition: all 0s !important; }
+  h2.fade-in.hidden {
+    opacity: 0;
+    transform: translate(0, 10vh); }
+  h2.fade-in.visible {
+    opacity: 1;
+    transform: translate(0, 0); }
+
+div.fade-in {
+  transition: all 1.5s ease 0s; }
+  div.fade-in.instant {
+    transition: all 0s !important; }
+  div.fade-in.hidden {
+    opacity: 0; }
+  div.fade-in.visible {
+    opacity: 1; }
+
 body {
   background-color: white;
   font-size: 16px;
@@ -540,8 +560,8 @@ section img {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 section img:hover {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3); }
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
 
 .nav-toggle {
   position: fixed;

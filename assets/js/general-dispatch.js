@@ -98,6 +98,64 @@ async function fetchEdits(){
 $(document).ready(fetchEdits);
 
 
+function fadeIn(targets) {
+	for (let i = 0; i < targets.length; i++) {
+		var tag = targets[i];
+		if (!checkvisible(tag)) {
+			$(tag).removeClass('hidden').addClass('visible');
+		}
+	}
+}
+
+var scrollInit = false;
+$(document).ready(function(){
+	// const targets = $('.fade-in').map((_,e)=>$(e));
+	const targets = $('.fade-in');
+	targets.each((_,e)=>$(e).addClass('hidden'));
+	//.each((i,e)=> i>0?e.style.transition = 'all 1.5s ease 0s':0);
+	$(window).scroll(function(e){
+		fadeIn(targets);
+		if (!scrollInit) {$(targets[0]).removeClass('instant');scrollInit = true}
+	});
+	fadeIn(targets);
+});
+
+// checkvisible = !checkvisible ? wtf, nvm
+// https://stackoverflow.com/questions/5353934/check-if-element-is-visible-on-screen
+function posY(elm) {
+    var test = elm, top = 0;
+
+    while(!!test && test.tagName.toLowerCase() !== "body") {
+        top += test.offsetTop;
+        test = test.offsetParent;
+    }
+
+    return top;
+}
+
+function viewPortHeight() {
+    var de = document.documentElement;
+
+    if(!!window.innerWidth)
+    { return window.innerHeight; }
+    else if( de && !isNaN(de.clientHeight) )
+    { return de.clientHeight; }
+    
+    return 0;
+}
+
+function scrollY() {
+    if( window.pageYOffset ) { return window.pageYOffset; }
+    return Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+}
+
+function checkvisible( elm ) {
+    var vpH = viewPortHeight(), // Viewport Height
+        st = scrollY(), // Scroll Top
+        y = posY(elm);
+    
+    return (y > (vpH + st));
+}
 function deferIframe() {
   var iframeElem = document.getElementsByTagName('iframe');
   for ( var i = 0; i < iframeElem.length; i++ ) {
