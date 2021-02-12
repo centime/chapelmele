@@ -261,16 +261,22 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
-h2 {
+h2, h3 {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 42px;
   font-family: "Raleway", Helvetica, sans-serif;
-  font-weight: 100; }
+  line-height: 1.1; }
   @media (max-width: 770px) {
-    h2 {
+    h2, h3 {
       margin-bottom: 20px;
       font-size: 30px; } }
+
+h2 {
+  font-weight: bold; }
+
+h3 {
+  font-weight: 100; }
 
 .underlined {
   border-bottom: 2px solid rgba(17, 17, 17, 0.15) !important; }
@@ -281,25 +287,23 @@ h2 {
 a {
   color: #130036; }
 
-h2.fade-in {
+.content {
   transition: all 1.5s ease 0s; }
-  h2.fade-in.instant {
-    transition: all 0s !important; }
-  h2.fade-in.hidden {
-    opacity: 0;
+  .content.hidden.bloc-img-right {
+    transform: translate(30vw, 0); }
+  .content.hidden.bloc-img-left {
+    transform: translate(-30vw, 0); }
+  .content.visible {
+    transform: translate(0, 0); }
+  .content .bloc-text * {
+    transition: all 1.5s ease 0s; }
+  .content .bloc-text .hidden {
+    opacity: 0; }
+  .content .bloc-text h2.hidden, .content .bloc-text h3.hidden {
     transform: translate(0, 10vh); }
-  h2.fade-in.visible {
+  .content .bloc-text .visible {
     opacity: 1;
     transform: translate(0, 0); }
-
-div.fade-in {
-  transition: all 1.5s ease 0s; }
-  div.fade-in.instant {
-    transition: all 0s !important; }
-  div.fade-in.hidden {
-    opacity: 0; }
-  div.fade-in.visible {
-    opacity: 1; }
 
 body {
   background-color: white;
@@ -519,7 +523,7 @@ section .bloc-text {
       width: 90%;
       padding: 20px; } }
   section .bloc-text h2 {
-    margin-top: 0px; }
+    margin: 0px; }
 section .placeholder {
   flex: 1 0 50%; }
 
@@ -926,6 +930,8 @@ footer {
     #three-slide {
       height: 50vw;
       min-height: 50vw; } }
+  #three-slide .front img:hover {
+    transform: scale(1); }
 
 @media (min-width: 770px) {
   #tiers-lieu-alencon #hero {
