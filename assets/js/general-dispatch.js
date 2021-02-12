@@ -111,7 +111,7 @@ var scrollInit = false;
 $(document).ready(function(){
 	// const targets = $('.fade-in').map((_,e)=>$(e));
     // const targets = $('.bloc-text *');
-    const targets = $('.content.bloc-img-right, .content.bloc-img-left , .bloc-text *');
+    const targets = $('.content.bloc-img-right, .content.bloc-img-left , .bloc-text h2,h3,div');
 	targets.each((_,e)=>$(e).addClass('hidden'));
 	//.each((i,e)=> i>0?e.style.transition = 'all 1.5s ease 0s':0);
 	$(window).scroll(function(e){
