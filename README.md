@@ -2,6 +2,7 @@ Todos
 =====
 
 Content
+* new urls checkup
 * sections text+img
 * hero bgs
 * "plan des chatelets"
