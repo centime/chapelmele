@@ -1,13 +1,26 @@
 Todos
 =====
 
+MVP requirements
+
+* open graph
+* new urls checkup
+* metas
+* footer & contact
+* sections text+img
+* img uploads
+* /actualites/ admin
+* /agenda/ covid
+* posts: festival, vide-dressing, four pizza, marché artisans
+* sitemap.xml
+
+
 Content
 * new urls checkup
 * sections text+img
 * hero bgs
 * "plan des chatelets"
 * images cropping
-* favicon
 * logos ?
 * social widgets ?
 * a/img alt/title
@@ -24,6 +37,7 @@ Design
 * prevent pics distorsion
 * add parallax to .hera pics?
 * anchor links height offset
+* breadcrumbs
 
 Agendas
 * interactive events.json generator
@@ -60,7 +74,7 @@ Admin
 * sitemap.xml full urls
 * sitemap.xml relevant lastmods
 * RSS
-* ld-json
+* ld-json (+breadcrumbs)
 * open graph
 
 Clean up

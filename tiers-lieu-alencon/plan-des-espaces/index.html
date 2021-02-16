@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     
     <!-- https://realfavicongenerator.net/ -->
-	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
 
 
         <title>Chapêlmêle - Concerts, Spectacles, Résidences à Alençon</title>
@@ -168,7 +169,7 @@
           <p>Et toutes les autres assos, tous les volontaires sans étiquettes sans qui Chappêlmêle et les Petits Chatelets ne seraient pas ce qu'ils sont...</p>
           <div id="logos">
             <ul>
-              <li><img src="/assets/img/logos/logo-chapelmele-big.jpg" title="Logo de Chapêlmêle" alt="Logo de Chapêlmêle"/></li>
+              <li><img src="/assets/img/logos/logo-chapelmele-red-small.png" title="Logo de Chapêlmêle" alt="Logo de Chapêlmêle"/></li>
               <li><img class="petits-chatelets" src="/assets/img/logos/logo-chatelets-big.png" title="Logo des Petits Châtelets" alt="Logo des Petits Châtelets"/></li>
               <li><img src="/assets/img/logos/logo-ville-alencon.png" title="Logo de la ville d'Alençon" alt="Logo de la ville d'Alençon"/></li>
               <li><img src="/assets/img/logos/logo-departement-orne.png" title="Logo du département de l'Orne" alt="Logo du département de l'Orne"/></li>
@@ -190,5 +191,48 @@
       </div>
     </footer>
     <script defer="defer" async="async" async src="/assets/js/general-dispatch.js"></script>
+
+
+  <!-- website/chapelmele -->
+  <script type="application/ld+json">
+  {
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "https://chapelmele.com",
+   "about":{
+      "@type": "Organization",
+      "name": "Chapêlmêle",
+      "legalName": "Chapêlmêle",
+      "url": "https://chapelmele.com",
+      "sameAs": [
+        "https://www.facebook.com/chapelmele",
+        "https://goo.gl/maps/WRqYkoHm69Po8Nkc7"
+      ],
+      "logo": "https://chapelmele.com/assets/img/logos/logo-chapelmele-red-medium.png",
+      "image": "https://chapelmele.com/assets/img/home/chapelle-neige.jpg",
+      "description": "Association culturelle à Alençon",
+      "slogan": "Programmation culturelle alternative: concerts, spectacles, exposition...",
+      "email": "mailto:contact@chapelmele.com",
+      "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Alençon, France",
+          "postalCode": "61000",
+          "streetAddress": "41 chemin des Châtelets"
+        },
+        "url": "https://chapelmele.com/tiers-lieu-alencon/"
+      },
+      "contactPoint" : [{
+        "@type" : "ContactPoint",
+        "contactType" : "information",
+        "contactOption" : "TollFree",
+        "areaServed" : "FR",
+        "availableLanguage" : "French"
+      }]
+    }
+  }
+  </script>
+
   </body>
 </html>
