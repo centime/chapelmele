@@ -3,7 +3,6 @@ Todos
 
 MVP requirements
 
-* open graph
 * new urls checkup
 * metas
 * footer & contact
