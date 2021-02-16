@@ -37,6 +37,7 @@ Design
 * add parallax to .hera pics?
 * anchor links height offset
 * breadcrumbs
+* https://github.com/michalsnik/aos ?
 
 Agendas
 * interactive events.json generator
@@ -75,6 +76,7 @@ Admin
 * RSS
 * ld-json (+breadcrumbs)
 * open graph
+* redirect page & build
 
 Clean up
 * h2+br -> h2+h3
@@ -88,3 +90,4 @@ Clean up
 * fix #hero2 bullshit on homepage
 * replace zepto ?
 	https://github.com/franciscop/umbrella/blob/master/jquery.md
+
