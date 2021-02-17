@@ -330,13 +330,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("/assets/img/home/chapelle-neige-crop.jpg");
   background-size: cover;
   height: 80vh;
   width: 100vw; }
-  @media (min-width: 770px) {
-    #hero {
-      background-image: url("/assets/img/home/chapelle-neige.jpg"); } }
   #hero h1 {
     position: relative;
     z-index: 1;
@@ -908,6 +904,12 @@ footer {
       height: 50px; }
       footer #logos img.petits-chatelets {
         height: 70px; }
+
+#home #hero {
+  background-image: url("/assets/img/home/chapelle-neige-crop.jpg"); }
+  @media (min-width: 770px) {
+    #home #hero {
+      background-image: url("/assets/img/home/chapelle-neige.jpg"); } }
 
 #three-slide {
   height: 600px; }
