@@ -909,7 +909,7 @@ footer {
   background-image: url("/assets/img/home/chapelle-neige-crop.jpg"); }
   @media (min-width: 770px) {
     #home #hero {
-      background-image: url("/assets/img/home/chapelle-neige.jpg"); } }
+      background-image: url("/assets/img/home/chapelle-neige.jpg") !important; } }
 
 #three-slide {
   height: 600px; }
