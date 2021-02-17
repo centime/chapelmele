@@ -1,19 +1,42 @@
+(()=>{
+
+var env, remote;
+if (document.domain === "localhost"){
+  env = 'dev';
+  remote = '/assets/dev';
+} else {
+  env = 'prod';
+  remote = "//data.chapelmele.com";
+}
+  // env = 'prod';
+  // remote = "//data.chapelmele.com";
+
 async function fetchPosts(){
   const template = $('#post-template').html();
-  const response = await fetch("//data.chapelmele.com/actualites.json");
+  const response = await fetch(remote + '/news.json');
   const posts = await response.json();
   
+  function ghcmsDecode(str){
+   return decodeURI(atob(str))
+  }
   for (let i=0; i<posts.length; i++){
     let $bloc = $(template);
-    $bloc.find('h2').html('<strong>'+posts[i].title+'</strong><br/>'+ posts[i].date);
-    $bloc.find('.bloc-text p').html(posts[i].content);
+    $bloc.prop('id', posts[i].id);
+    $bloc.attr('ghcms-feed-index', i);
+    $bloc.find('h2').html(posts[i].title);
+    $bloc.find('h3').html(posts[i].date);
+    $bloc.find('.bloc-text > div').html(ghcmsDecode(posts[i].b64content));
     if (posts[i].picture) {
-      $bloc.find('.bloc-pic img').attr('src', '//data.chapelmele.com/actu-imgs/'+posts[i].picture);
+      $bloc.find('.bloc-pic img').attr('src', remote + '/news-imgs/'+posts[i].picture);
     }
     $('#feed').append($bloc);
     (i%2 == 0) ? $bloc.toggleClass('bloc-img-right bloc-img-left') : 0;
   }
+
+  initFadeIn();
 }
 
-$(document).ready(fetchPosts);
 
+((localStorage['ghCMSEditor-' + document.domain])==="enabled") ? 0 :$(document).ready(fetchPosts);
+
+})();

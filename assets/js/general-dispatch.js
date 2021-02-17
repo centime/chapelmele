@@ -107,19 +107,21 @@ function fadeIn(targets) {
 	}
 }
 
-var scrollInit = false;
-$(document).ready(function(){
-	// const targets = $('.fade-in').map((_,e)=>$(e));
+function initFadeIn(){
+    // const targets = $('.fade-in').map((_,e)=>$(e));
     // const targets = $('.bloc-text *');
     const targets = $('.content.bloc-img-right, .content.bloc-img-left , .bloc-text h2,h3,div');
-	targets.each((_,e)=>$(e).addClass('hidden'));
-	//.each((i,e)=> i>0?e.style.transition = 'all 1.5s ease 0s':0);
-	$(window).scroll(function(e){
-		fadeIn(targets);
-		if (!scrollInit) {$(targets[0]).removeClass('instant');scrollInit = true}
-	});
-	fadeIn(targets);
-});
+    targets.each((_,e)=>$(e).addClass('hidden'));
+    //.each((i,e)=> i>0?e.style.transition = 'all 1.5s ease 0s':0);
+    $(window).scroll(function(e){
+        fadeIn(targets);
+        if (!scrollInit) {$(targets[0]).removeClass('instant');scrollInit = true}
+    });
+    fadeIn(targets);
+}
+
+var scrollInit = false;
+$(document).ready(initFadeIn);
 
 // checkvisible = !checkvisible ? wtf, nvm
 // https://stackoverflow.com/questions/5353934/check-if-element-is-visible-on-screen
