@@ -3,15 +3,13 @@ Todos
 
 MVP requirements
 
-* new urls checkup
 * metas
 * footer & contact
-* sections text+img
+* sections text+img (cours & ateliers; revue presse; marché artisans)
 * /agenda/ covid
 * posts: festival, vide-dressing, four pizza, marché artisans
 * sitemap.xml
 * imgs compress & crop & -small & -square ?
-* responsive sections margins (.hera + section {margin-top: 100px})?
 
 
 Content
