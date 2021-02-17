@@ -594,7 +594,7 @@ function displayPosts(posts){
     let $bloc = $(template);
     $bloc.prop('id', posts[i].id);
     $bloc.attr('ghcms-feed-index', i);
-    $bloc.find('h2').html(posts[i].title);
+    $bloc.find('h2').html(ghcmsDecode(posts[i].title));
     $bloc.find('h3').html(posts[i].date);
     $bloc.find('.bloc-text > div').html(ghcmsDecode(posts[i].b64content));
     if (posts[i].picture) {
@@ -632,7 +632,7 @@ function validateNewPost(){
 
   const newPost = {
     'id': $panel.find('#targetId').val(),
-    'title': $panel.find('#targetTitle').val(),
+    'title': ghcmsEncode($panel.find('#targetTitle').val()),
     'date': $panel.find('#targetDate').val(),
     'picture': $panel.find('#imgName').val(),
     'b64content': ghcmsEncode(mdConverter.makeHtml($panel.find('textarea').val()))

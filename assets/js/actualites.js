@@ -23,7 +23,7 @@ async function fetchPosts(){
     let $bloc = $(template);
     $bloc.prop('id', posts[i].id);
     $bloc.attr('ghcms-feed-index', i);
-    $bloc.find('h2').html(posts[i].title);
+    $bloc.find('h2').html(ghcmsDecode(posts[i].title));
     $bloc.find('h3').html(posts[i].date);
     $bloc.find('.bloc-text > div').html(ghcmsDecode(posts[i].b64content));
     if (posts[i].picture) {
