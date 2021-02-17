@@ -7,8 +7,6 @@ MVP requirements
 * metas
 * footer & contact
 * sections text+img
-* img uploads
-* /actualites/ admin
 * /agenda/ covid
 * posts: festival, vide-dressing, four pizza, marché artisans
 * sitemap.xml
