@@ -34,6 +34,7 @@ async function fetchPosts(){
   }
 
   initFadeIn();
+  location.hash=location.hash;
 }
 
 
