@@ -14349,17 +14349,20 @@ function init(){
       locale: 'fr',
 	  eventDidMount: function(ev) {
         console.log(ev.el);
-        console.log(ev.event.extendedProps.description);
-        $(ev.el).append('<div class="event-desc" event-id="'+ev.event.url+'" style="display:none">'+ev.event.extendedProps.description+'</div>');
+        $(ev.el).addClass('covid')
+        // console.log(ev.event.extendedProps.description);
+        // $(ev.el).append('<div class="event-desc" event-id="'+ev.event.url+'" style="display:none">'+ev.event.extendedProps.description+'</div>');
       }
     });
     calendar.render();
 
     async function update(calendar){
-		var events = await $.get('/assets/js/events.json');
+    	const response = await fetch('/assets/js/events.json');
+		const events = await response.json();
+		console.log(events);
 		calendar.addEventSource(events);
-		displayAnchoredEvent();
-		window.onhashchange = displayAnchoredEvent;
+		// displayAnchoredEvent();
+		// window.onhashchange = displayAnchoredEvent;
 	}
     update(calendar);
 }

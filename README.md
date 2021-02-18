@@ -7,7 +7,7 @@ MVP requirements
 * footer & contact
 * sections text+img (cours & ateliers; revue presse; marché artisans)
 * /agenda/ covid
-* posts: festival, vide-dressing, four pizza, marché artisans
+* posts: festival, vide-dressing, four pizza, marché artisans, patrim/matrimoine?
 * sitemap.xml
 * imgs compress & crop & -small & -square ?
 
