@@ -14349,7 +14349,7 @@ function init(){
       locale: 'fr',
 	  eventDidMount: function(ev) {
         console.log(ev.el);
-        $(ev.el).addClass('covid')
+        $(ev.el).addClass('event-covid');
         // console.log(ev.event.extendedProps.description);
         // $(ev.el).append('<div class="event-desc" event-id="'+ev.event.url+'" style="display:none">'+ev.event.extendedProps.description+'</div>');
       }

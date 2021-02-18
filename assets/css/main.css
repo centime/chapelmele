@@ -415,7 +415,7 @@ section {
   margin: 30px auto;
   overflow: hidden;
   z-index: 10;
-  top: 80vh;
+  top: 85vh;
   background-color: #f000; }
   @media (max-width: 1190px) {
     section {
@@ -792,6 +792,28 @@ header {
     background: green;
     color: #fff;
     z-index: 1000; }
+
+#breadcrumbs {
+  height: inherit;
+  min-height: inherit;
+  position: relative;
+  top: 80vh;
+  max-width: 80%;
+  margin: 0px auto;
+  margin-top: 20px; }
+  #breadcrumbs * {
+    font-family: arial;
+    font-size: 16px;
+    color: grey; }
+  #breadcrumbs .breadcrumb {
+    padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 0px; }
+  #breadcrumbs .separator {
+    padding-top: 20px; }
+
+#breadcrumbs + section.content {
+  margin-top: 0px; }
 
 footer {
   position: relative;

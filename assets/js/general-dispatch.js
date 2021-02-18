@@ -159,15 +159,6 @@ function checkvisible( elm ) {
     
     return (y > (vpH + st));
 }
-function deferIframe() {
-  var iframeElem = document.getElementsByTagName('iframe');
-  for ( var i = 0; i < iframeElem.length; i++ ) {
-    if(iframeElem[i].getAttribute('data-src')) {
-      iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'));
-    } 
-  } 
-}
-window.onload = deferIframe;
 
 function onPage(path){ return (''+window.location).indexOf(path)>0 }
 function editorModeOn(){ return (localStorage['ghCMSEditor-' + document.domain])==="enabled" }
