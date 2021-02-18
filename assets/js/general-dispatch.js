@@ -40,6 +40,7 @@ $(document).ready(function(){
   var $h1 = $('#hero > h1');
   var $hTitle = $('#header-title');
   var $header = $('header');
+  var $backToTop = $('#back-to-top');
 
   function hero(scrolled){
     $hero.css('top',-(scrolled*0.0315)+'rem');
@@ -55,6 +56,7 @@ $(document).ready(function(){
     if (userScrolledCoef <= 1) userScrolledCoef += .03;
     $hTitle.css('opacity', userScrolledCoef);
     $header.css('background-color', "rgb(255,255,255,"+userScrolledCoef+")");
+    $backToTop.css('opacity', userScrolledCoef);
   }
 
   function parallax(){

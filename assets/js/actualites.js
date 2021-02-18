@@ -25,7 +25,7 @@ async function fetchPosts(){
     $bloc.attr('ghcms-feed-index', i);
     $bloc.find('h2').html(ghcmsDecode(posts[i].title));
     $bloc.find('h3').html(posts[i].date);
-    $bloc.find('.bloc-text > div').html(ghcmsDecode(posts[i].b64content));
+    $bloc.find('.bloc-text div.description').html(ghcmsDecode(posts[i].b64content));
     if (posts[i].picture) {
       $bloc.find('.bloc-pic img').attr('src', remote + '/news-imgs/'+posts[i].picture);
     }
