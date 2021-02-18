@@ -352,11 +352,12 @@ body {
       #hero h1 {
         margin: 20vh auto 0; } }
     #hero h1.long-h1 {
-      margin: 15vh auto !important;
-      font-size: 15vw !important; }
-      @media (max-width: 770px) {
+      margin: 25vh auto !important;
+      font-size: 25vw !important; }
+      @media (min-width: 770px) {
         #hero h1.long-h1 {
-          font-size: 25vw !important; } }
+          margin: 15vh auto !important;
+          font-size: 15vw !important; } }
 
 #hero2 {
   position: fixed;
@@ -1012,16 +1013,22 @@ footer {
   margin-top: 0;
   margin-bottom: 0; }
 
-#collectif-des-petits-chatelets .resp-margin-top .wrapper {
+#createurs #hero {
+  background-image: url("/assets/img/tiers-lieu-alencon/porte-graph-alexandre-marnat.JPG"); }
+  @media (min-width: 770px) {
+    #createurs #hero {
+      background-image: url("/assets/img/tiers-lieu-alencon/createurs/porte-graph-alexandre-marnat-hero.jpg") !important; } }
+
+#createurs .resp-margin-top .wrapper {
   margin-top: 200px;
   margin-bottom: 0px; }
-#collectif-des-petits-chatelets .resp-margin-bottom .wrapper {
+#createurs .resp-margin-bottom .wrapper {
   margin-bottom: 200px;
   margin-top: 0px; }
-#collectif-des-petits-chatelets h2, #collectif-des-petits-chatelets h3 {
+#createurs h2, #createurs h3 {
   margin: 0;
   padding-top: 0px; }
-  #collectif-des-petits-chatelets h2 img, #collectif-des-petits-chatelets h3 img {
+  #createurs h2 img, #createurs h3 img {
     width: 100px;
     height: 100px;
     border-radius: 80px;
@@ -1031,28 +1038,28 @@ footer {
     bottom: 45px;
     right: 20px; }
     @media (max-width: 450px) {
-      #collectif-des-petits-chatelets h2 img, #collectif-des-petits-chatelets h3 img {
+      #createurs h2 img, #createurs h3 img {
         bottom: 0px;
         right: 0px; } }
-#collectif-des-petits-chatelets #collectif-petits-chatelets-presentation ul {
+#createurs #collectif-petits-chatelets-presentation ul {
   justify-content: left; }
-  #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation ul * {
+  #createurs #collectif-petits-chatelets-presentation ul * {
     display: flex !important; }
-  #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation ul h4 {
+  #createurs #collectif-petits-chatelets-presentation ul h4 {
     display: block !important; }
-#collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li {
+#createurs #collectif-petits-chatelets-presentation li {
   min-width: 350px;
   width: 30%;
   margin: 0px; }
-  #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li a {
+  #createurs #collectif-petits-chatelets-presentation li a {
     display: flex;
     padding: 10px; }
-    #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li a h3 {
+    #createurs #collectif-petits-chatelets-presentation li a h3 {
       padding-top: 20px;
       width: 200px;
       justify-content: center;
       flex-direction: column; }
-      #collectif-des-petits-chatelets #collectif-petits-chatelets-presentation li a h3 p {
+      #createurs #collectif-petits-chatelets-presentation li a h3 p {
         justify-content: center;
         font-size: 12px; }
 
