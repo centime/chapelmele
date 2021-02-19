@@ -774,7 +774,8 @@ section.bloc-double-text .wrapper {
       line-height: 1.2em !important; }
     header .nav, header .nav-section {
       display: flex !important;
-      border: none !important; }
+      border: none !important;
+      overflow: inherit !important; }
       header .nav li, header .nav-section li {
         background-color: inherit !important; }
     header .nav-section {
