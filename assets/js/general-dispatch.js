@@ -41,6 +41,7 @@ $(document).ready(function(){
   var $hTitle = $('#header-title');
   var $header = $('header');
   var $backToTop = $('#back-to-top');
+  var $nav = $('.nav-section li');
 
   function hero(scrolled){
     $hero.css('top',-(scrolled*0.0315)+'rem');
@@ -58,6 +59,7 @@ $(document).ready(function(){
   function easeInHeader(){
     if (userScrolledCoef <= 1) userScrolledCoef += .03;
     $hTitle.css('opacity', userScrolledCoef);
+    $nav.css('opacity', userScrolledCoef);
     $header.css('background-color', "rgb(255,255,255,"+userScrolledCoef+")");
     $backToTop.css('opacity', userScrolledCoef);
   }
@@ -65,6 +67,7 @@ $(document).ready(function(){
   function parallax(){
     var scrolled = $(window).scrollTop();
     hero(scrolled);
+    $('.full-menu-option').on('click', ()=>{userScrolledCoef = 1.1; easeInHeader()})
     easeInHeader();
   };
   

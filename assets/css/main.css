@@ -749,6 +749,52 @@ section.bloc-double-text .wrapper {
     display: flex;
     flex-direction: row; }
 
+@media (min-width: 1190px) {
+  #breadcrumbs {
+    top: 55px !important;
+    right: 235px !important; }
+
+  header {
+    height: 80px !important;
+    background-color: white; }
+    header .full-menu-option {
+      position: fixed !important;
+      top: 12px;
+      right: 12px;
+      width: 200px !important;
+      opacity: 1 !important; }
+      header .full-menu-option label {
+        background-color: white !important; }
+      header .full-menu-option * {
+        opacity: 1 !important; }
+    header #header-title {
+      position: fixed;
+      top: 0px;
+      right: 160px;
+      line-height: 1.2em !important; }
+    header .nav, header .nav-section {
+      display: flex !important;
+      border: none !important; }
+      header .nav li, header .nav-section li {
+        background-color: inherit !important; }
+    header .nav-section {
+      position: fixed !important;
+      top: 0px !important;
+      right: 450px !important;
+      height: 80px; }
+      header .nav-section .main-menu ul, header .nav-section .main-menu li, header .nav-section .main-menu a {
+        display: flex !important; }
+    header .full-menu {
+      position: fixed;
+      top: 80px;
+      background: white;
+      left: 0px;
+      right: 0px;
+      margin: 0; }
+    header .main-menu {
+      margin: 15px !important; }
+    header #nav-panel-out, header .nav-toggle {
+      display: none !important; } }
 header {
   position: fixed;
   display: flex;
@@ -1009,6 +1055,13 @@ footer {
 @media (min-width: 770px) {
   #tiers-lieu-alencon #hero {
     background-image: url(/assets/img/tiers-lieu-alencon/cour-chatelets-vue-aerienne.jpg) !important; } }
+#tiers-lieu-alencon #collectif-petits-chatelets-presentation ul li img {
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  overflow: hidden;
+  max-width: 25vw;
+  max-height: 25vw; }
 
 #collectif-petits-chatelets-presentation .wrapper {
   display: flex;
@@ -1050,13 +1103,6 @@ footer {
         @media (max-width: 1190px) {
           #collectif-petits-chatelets-presentation .wrapper ul li h4 {
             display: none; } }
-      #collectif-petits-chatelets-presentation .wrapper ul li img {
-        height: 150px;
-        width: 150px;
-        border-radius: 150px;
-        overflow: hidden;
-        max-width: 25vw;
-        max-height: 25vw; }
 #collectif-petits-chatelets-presentation .bloc-link {
   margin-top: 20px; }
 
@@ -1123,8 +1169,14 @@ footer {
   #createurs #collectif-petits-chatelets-presentation ul img {
     position: relative;
     top: 10px;
+    width: 150px; }
+  #createurs #collectif-petits-chatelets-presentation ul span {
     min-height: 150px;
-    min-width: 150px; }
+    min-width: 150px;
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    overflow: hidden; }
 #createurs #collectif-petits-chatelets-presentation li {
   min-width: 350px;
   width: 30%;
