@@ -38,10 +38,11 @@ $(document).ready(function(){
   var $hero = $('#hero');
   var $hero2 = $('#hero2');
   var $h1 = $('#hero > h1');
-  var $hTitle = $('#header-title');
+  // var $hTitle = $('#header-title');
   var $header = $('header');
   var $backToTop = $('#back-to-top');
   var $nav = $('.nav-section li');
+  var stickied = false;
 
   function hero(scrolled){
     $hero.css('top',-(scrolled*0.0315)+'rem');
@@ -50,15 +51,19 @@ $(document).ready(function(){
       'top':-(scrolled*-0.005)+'rem', 
       'opacity':1-(scrolled*.00175)
     });
-    if(scrolled >= 50){ 
+    if((!stickied) && (scrolled >= 50)){ 
+      stickied = true;
       $('#breadcrumbs').addClass('stickied');
-    } else if(scrolled < 50) $('#breadcrumbs').removeClass('stickied');
+    } else if ((stickied) && (scrolled < 50)) {
+      stickied = false;
+      $('#breadcrumbs').removeClass('stickied');
+    }
   }
 
   var userScrolledCoef = 0;
   function easeInHeader(){
     if (userScrolledCoef <= 1) userScrolledCoef += .03;
-    $hTitle.css('opacity', userScrolledCoef);
+    // $hTitle.css('opacity', userScrolledCoef);
     $nav.css('opacity', userScrolledCoef);
     $header.css('background-color', "rgb(255,255,255,"+userScrolledCoef+")");
     $backToTop.css('opacity', userScrolledCoef);
@@ -67,10 +72,11 @@ $(document).ready(function(){
   function parallax(){
     var scrolled = $(window).scrollTop();
     hero(scrolled);
-    $('.full-menu-option').on('click', ()=>{userScrolledCoef = 1.1; easeInHeader()})
     easeInHeader();
   };
   
+  $('.full-menu-option').on('click', ()=>{userScrolledCoef = 1.1; easeInHeader()})
+  $('.full-menu').on('click', ()=>{$('#nav-panel-full-menu-in').click(); userScrolledCoef = 0; easeInHeader()})
   parallax();
   $('header .nav a').on('click', ()=>{
     $('#nav-panel-checkbox').prop('checked', false);

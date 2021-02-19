@@ -779,7 +779,8 @@ section.bloc-double-text .wrapper {
     header .nav, header .nav-section {
       display: flex !important;
       border: none !important;
-      overflow: inherit !important; }
+      overflow: inherit !important;
+      border-bottom: 1px solid rgba(17, 17, 17, 0.15) !important; }
       header .nav li, header .nav-section li {
         background-color: inherit !important; }
     header .nav-section {
@@ -788,11 +789,12 @@ section.bloc-double-text .wrapper {
       right: 450px !important;
       height: 80px; }
       header .nav-section .main-menu {
-        margin: 15px !important;
-        margin-top: 30px !important; }
+        margin: 15px !important; }
         header .nav-section .main-menu ul, header .nav-section .main-menu li, header .nav-section .main-menu a {
           display: flex !important;
           line-height: 1.3em !important; }
+        header .nav-section .main-menu a {
+          padding: 10px; }
     header .full-menu {
       position: fixed;
       top: 80px;
@@ -812,8 +814,7 @@ header {
   z-index: 20;
   top: 0px;
   flex-direction: row;
-  flex-wrap: wrap;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.15); }
+  flex-wrap: wrap; }
   header #header-title {
     font-family: "IntriqueScript", serif;
     color: red;
