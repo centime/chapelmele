@@ -1137,7 +1137,7 @@ footer {
     font-family: monospace; }
 
 #ghCMS-news-panel #targetId, #ghCMS-news-panel #targetIndex, #ghCMS-news-panel #imgSize {
-  display: none; }
+  display: none !important; }
 
 #ghCMS-editor-panel, #ghCMS-news-panel {
   position: fixed;
