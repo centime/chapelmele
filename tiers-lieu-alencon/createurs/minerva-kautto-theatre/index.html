@@ -203,16 +203,16 @@
           </div>
         </div>
         <div id="cookies-notice">
-          <p>Ce site n'utilise aucun cookie de navigation <a href="#cookies-notice" onclick="document.querySelector('#cookies-notice a').style.visibility = 'hidden'">afficher la liste complète</a>
+          <p>Ce site n'utilise aucun cookie de navigation <a href="#cookies-notice" title="Afficher tous les cookies que l'on utilise et/ou n'utilise pas"onclick="document.querySelector('#cookies-notice a').style.visibility = 'hidden'">afficher la liste complète</a>
           </p>
-          <button class="accept" onclick="saveCookieNotice()">Tout accepter</button><button class="refuse" onclick="saveCookieNotice()">Ne rien refuser</button>
+          <button class="accept" title="ou pas" onclick="saveCookieNotice()">Tout accepter</button><button title="ou pas" class="refuse" onclick="saveCookieNotice()">Ne rien refuser</button>
           <script type="text/javascript">
             function updtCookiesNotice(){window.localStorage?localStorage.cookie?document.querySelector('#cookies-notice').style.display = 'none':0:0;}
             function saveCookieNotice(){window.localStorage?localStorage.cookie?0:localStorage.cookie=true:0;updtCookiesNotice()}
             updtCookiesNotice();
           </script>
         </div>
-        <p class="credit"><a href="http://centime.fr">Vincent Delaunay</a>, 2021</p>
+        <p class="credit"><a href="http://centime.fr" title="Site perso du créateur de chapelmele.com">Vincent Delaunay</a>, 2021</p>
       </div>
     </footer>
 
@@ -240,21 +240,53 @@
         "https://www.youtube.com/channel/UCfIabwcprh1qM0ABjuY_ypA"
       ],
       "logo": "https://chapelmele.com/assets/img/logos/logo-chapelmele-red-medium.png",
-      "image": "https://chapelmele.com/assets/img/home/chapelle-neige.jpg",
+      "image": "https://chapelmele.com/assets/img/logos/chapelmele-splash-simple.png",
       "description": "Association culturelle à Alençon",
       "slogan": "Programmation culturelle alternative: concerts, spectacles, exposition...",
       "email": "mailto:contact@chapelmele.com",
       "location": {
         "@type": "Place",
         "name":"Petits Châtelêts",
+        "url": "https://chapelmele.com/tiers-lieu-alencon/",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Alençon, France",
           "postalCode": "61000",
           "streetAddress": "41 chemin des Châtelets"
         },
-        "url": "https://chapelmele.com/tiers-lieu-alencon/"
+        "hasMap": "https://www.openstreetmap.org/export/embed.html?bbox=0.06293535232543947,48.43437585276107,0.07709741592407228,48.44058978410332&layer=mapnik&marker=48.43748291343954,0.07001638412475586"
       },
+       "member": [
+        {
+          "@type": "EntertainmentBusiness",
+          "name": "Nos activités culturelles",
+          "url": "https://chapelmele.com/activites-culturelles/",
+          "image": "https://chapelmele.com/assets/img/home/porte-chapelle-en-lumiere.jpg",
+          "priceRange": "$",
+          "address": "41 chemin des Châtelets, 61000 Alencon"
+        },
+        {
+          "@type": "Resort",
+          "name": "Résidences artistiques",
+          "audience": [
+            "artists",
+            "artistes",
+            "artistes plasticiens",
+            "artistes spectacle vivant",
+            "musicians",
+            "musiciens",
+            "comedians",
+            "comediens",
+            "painters",
+            "peintres"
+          ],
+          "url": "https://chapelmele.com/residences-artistiques-normandie/",
+          "image": "https://chapelmele.com/assets/img/residences-artistiques-normandie/cour-chapelle-vue-aerienne.jpg",
+          "priceRange": "$",
+          "address": "41 chemin des Châtelets, 61000 Alencon",
+          "email": "mailto:contact@chapelmele.com"
+        }
+      ],
       "contactPoint" : [{
         "@type" : "ContactPoint",
         "contactType" : "information",
