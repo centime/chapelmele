@@ -1005,8 +1005,6 @@ footer {
     #three-slide {
       height: 50vw;
       min-height: 50vw; } }
-  #three-slide .front img:hover {
-    transform: scale(1); }
 
 @media (min-width: 770px) {
   #tiers-lieu-alencon #hero {
