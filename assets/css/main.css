@@ -1128,6 +1128,10 @@ footer {
         justify-content: center;
         font-size: 12px; }
 
+#video-drone {
+  top: 0px;
+  border-radius: 0px; }
+
 #admin-actu {
   height: inherit !important;
   height: inherit !important; }

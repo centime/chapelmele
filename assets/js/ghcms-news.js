@@ -709,7 +709,7 @@ function loadImgFile(){
 
               let _b64img = fr.result.split(';base64,')[1];
               $('#ghCMS-news-panel #imgSize').val(_b64img.length);
-              if (_b64img.length > 660000) { alert('image too big (>450ko)'); return}
+              if (_b64img.length > 440000) { alert('image too big (>300ko)'); return}
               // if (_b64img.length > 220000) { alert('image too big (>150ko)'); return}
               b64img = _b64img
 
