@@ -49,6 +49,9 @@ $(document).ready(function(){
       'top':-(scrolled*-0.005)+'rem', 
       'opacity':1-(scrolled*.00175)
     });
+    if(scrolled >= 50){ 
+      $('#breadcrumbs').addClass('stickied');
+    } else if(scrolled < 50) $('#breadcrumbs').removeClass('stickied');
   }
 
   var userScrolledCoef = 0;

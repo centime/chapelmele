@@ -773,7 +773,7 @@ header {
     padding-left: 180px;
     z-index: 100;
     display: block !important;
-    line-height: 1.2em;
+    line-height: 0.8em;
     float: right;
     margin-right: 80px;
     padding: 0px;
@@ -815,6 +815,21 @@ header {
 
 #breadcrumbs + section.content {
   margin-top: 0px; }
+
+#breadcrumbs.stickied {
+  position: fixed;
+  top: 43px;
+  z-index: 1000;
+  right: 80px;
+  max-width: 70%;
+  height: 30px;
+  line-height: 1;
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl;
+  text-align: left; }
 
 footer {
   position: relative;
