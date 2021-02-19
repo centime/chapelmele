@@ -750,10 +750,6 @@ section.bloc-double-text .wrapper {
     flex-direction: row; }
 
 @media (min-width: 1190px) {
-  #breadcrumbs {
-    top: 55px !important;
-    right: 235px !important; }
-
   header {
     height: 80px !important;
     background-color: white; }
@@ -877,6 +873,10 @@ header {
   text-overflow: ellipsis;
   direction: rtl;
   text-align: left; }
+  @media (min-width: 1190px) {
+    #breadcrumbs.stickied {
+      top: 55px !important;
+      right: 235px !important; } }
 
 footer {
   position: relative;
