@@ -76,7 +76,7 @@ $(document).ready(function(){
   };
   
   $('.full-menu-option, #nav-panel-in').on('click', ()=>{userScrolledCoef = 1.1; easeInHeader()})
-  $('.full-menu').on('click', ()=>{$('#nav-panel-full-menu-in').click(); userScrolledCoef = 0; easeInHeader()})
+  $('.full-menu, #contact-link').on('click', ()=>{$('#nav-panel-full-menu-checkbox').prop('checked', false); userScrolledCoef = 0; easeInHeader()})
   parallax();
   $('header .nav a').on('click', ()=>{
     $('#nav-panel-checkbox').prop('checked', false);
