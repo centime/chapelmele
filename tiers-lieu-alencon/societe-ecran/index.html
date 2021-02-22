@@ -24,10 +24,7 @@
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:site_name" content="Chapêlmêle" />
     
-    <!-- <meta name="twitter:site" content="@chapelmele" /> -->
-
-
- <!-- /*https://www.sitelocity.com/critical-path-css-generator*/ -->    <title>Société Écran - Atelier de sérigraphie associatif</title>
+    <!-- <meta name="twitter:site" content="@chapelmele" /> -->    <title>Société Écran - Atelier de sérigraphie associatif</title>
     <meta name="description" content="Un atelier de sérigraphie installé aux Petits Châtelets à Alençon (61). Ouvert au public à l'occasion, toujours ouvert aux projets et idées diverses... Tout le matériel nécessaire est là, de l'insolation à la reproduction." />
     <link rel="canonical" href="https://chapelmele.com/tiers-lieu-alencon/societe-ecran/" />
 
@@ -224,69 +221,94 @@
 
   <!-- website/chapelmele -->
   <script type="application/ld+json">
-  {
-   "@context": "http://schema.org",
-   "@type": "WebSite",
-   "url": "https://chapelmele.com",
-   "about":{
-      "@type": "Organization",
-      "name": "Chapêlmêle",
-      "legalName": "Chapêlmêle",
-      "url": "https://chapelmele.com",
-      "sameAs": [
-        "https://www.facebook.com/chapelmele",
-        "https://goo.gl/maps/WRqYkoHm69Po8Nkc7",
-        "https://www.youtube.com/channel/UCfIabwcprh1qM0ABjuY_ypA",
-        "https://www.helloasso.com/associations/chapelmele"
-      ],
-      "logo": "https://chapelmele.com/assets/img/logos/logo-chapelmele-red-medium.png",
-      "image": "https://chapelmele.com/assets/img/logos/chapelmele-splash-simple.png",
-      "description": "Association culturelle et artistique à Alençon, aux Petits Châtelets",
-      "slogan": "Programmation culturelle alternative: concerts, spectacles, exposition, et accueil d'artistes en résidence.",
-      "email": "mailto:contact@chapelmele.com",
-      "location": {
+{
+    "@context": "https://schema.org",
+    "@graph": [
+    {
+        "@type": "WebSite",
+        "@id": "https://chapelmele.com/#website",
+        "url": "https://chapelmele.com/",
+        "name": "Chapelmele.com",
+        "description": "Culture alternative, Programmation artistique, Tiers-lieu associatif sur Alençon",
+        "publisher": {
+            "@id": "https://chapelmele.com/#organization"
+        },
+        "inLanguage": "fr-FR"
+    },{
+        "@type": "Organization",
+        "@id": "https://chapelmele.com/#organization",
+        "name": "Chapêlmêle",
+        "legalName": "Chapêlmêle",
+        "url": "https://chapelmele.com",
+        "sameAs": [
+            "https://www.facebook.com/chapelmele",
+            "https://goo.gl/maps/WRqYkoHm69Po8Nkc7",
+            "https://www.youtube.com/channel/UCfIabwcprh1qM0ABjuY_ypA",
+            "https://www.helloasso.com/associations/chapelmele"
+        ],
+        "logo": {
+            "@type": "ImageObject",
+            "@id": "https://chapelmele.com/#logo",
+            "url": "https://chapelmele.com/assets/img/logos/logo-chapelmele-red-medium.png",
+            "caption": "Logo de Chapêlmêle"
+        },
+        "image": {
+            "@type": "ImageObject",
+            "@id": "https://chapelmele.com/#splash",
+            "url": "https://chapelmele.com/assets/img/logos/chapelmele-splash-simple.png",
+            "caption": "Image de présentation de Chapelmele.com"
+        },
+        "description": "Association culturelle et artistique à Alençon, aux Petits Châtelets",
+        "slogan": "Programmation culturelle alternative: concerts, spectacles, exposition, et accueil d'artistes en résidence.",
+        "email": "contact@chapelmele.com",
+        "location": { "@id": "https://chapelmele.com/#place" },
+        "member": [
+            { "@id": "https://chapelmele.com/#entertainment"},
+            { "@id": "https://chapelmele.com/#resort"}
+        ],
+        "contactPoint": {"@id": "https://chapelmele.com/#contact"}
+    },{
         "@type": "Place",
-        "name":"Petits Châtelêts",
+        "@id": "https://chapelmele.com/#place",
         "url": "https://chapelmele.com/tiers-lieu-alencon/",
+        "name":"Petits Châtelêts",
         "address": {
           "@type": "PostalAddress",
+          "@id": "https://chapelmele.com/tiers-lieu-alencon/#address",
           "addressLocality": "Alençon, France",
           "postalCode": "61000",
           "streetAddress": "41 chemin des Châtelets"
         },
         "hasMap": "https://www.openstreetmap.org/export/embed.html?bbox=0.06293535232543947,48.43437585276107,0.07709741592407228,48.44058978410332&layer=mapnik&marker=48.43748291343954,0.07001638412475586"
-      },
-      "member": [
-        {
-          "@type": "EntertainmentBusiness",
-          "name": "Programmation culturelle de Chapêlmêle",
-          "url": "https://chapelmele.com/activites-culturelles/",
-          "image": "https://chapelmele.com/assets/img/home/porte-chapelle-en-lumiere.jpg",
-          "priceRange": "$",
-          "address": "41 chemin des Châtelets, 61000 Alencon"
-        },
-        {
-          "@type": "Resort",
-          "name": "Résidences artistiques à Chapêlmêle",
-          "audience": [
-            "artists", "artistes", "artistes plasticiens", "artistes spectacle vivant", "musicians", "musiciens", "comedians", "comediens", "painters", "peintres"
-          ],
-          "url": "https://chapelmele.com/residences-artistiques-normandie/",
-          "image": "https://chapelmele.com/assets/img/residences-artistiques-normandie/cour-chapelle-vue-aerienne.jpg",
-          "priceRange": "$",
-          "address": "41 chemin des Châtelets, 61000 Alencon"
-        }
-      ],
-      "contactPoint" : [{
+    },{
+        "@type": "EntertainmentBusiness",
+        "@id": "https://chapelmele.com/#entertainment",
+        "url": "https://chapelmele.com/activites-culturelles/",
+        "name": "Programmation culturelle de Chapêlmêle",
+        "image": "https://chapelmele.com/assets/img/home/porte-chapelle-en-lumiere.jpg",
+        "priceRange": "$",
+        "address": {"@id": "https://chapelmele.com/tiers-lieu-alencon/#address"},
+        "contactPoint": {"@id": "https://chapelmele.com/#contact"}
+    },{
+        "@type": "Resort",
+        "@id": "https://chapelmele.com/#resort",
+        "url": "https://chapelmele.com/residences-artistiques-normandie/",
+        "name": "Résidences artistiques à Chapêlmêle",
+        "audience": ["artists", "artistes", "artistes plasticiens", "artistes spectacle vivant", "musicians", "musiciens", "comedians", "comediens", "painters", "peintres"],
+        "image": "https://chapelmele.com/assets/img/residences-artistiques-normandie/cour-chapelle-vue-aerienne.jpg",
+        "priceRange": "$",
+        "address": {"@id": "https://chapelmele.com/tiers-lieu-alencon/#address"},
+        "contactPoint": {"@id": "https://chapelmele.com/#contact"}
+    },{
         "@type" : "ContactPoint",
+        "@id": "https://chapelmele.com/#contact",
         "contactType" : "information",
         "contactOption" : "TollFree",
         "areaServed" : "FR",
         "availableLanguage" : "French"
-      }]
     }
-  }
-  </script>
+  ]
+}</script>
 
   </body>
 </html>
