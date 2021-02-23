@@ -1,29 +1,18 @@
 Todos
 =====
 
-MVP requirements
-
-* metas
-* footer & contact
-* sections text+img (cours & ateliers; revue presse; marché artisans)
-* /agenda/ covid
-* posts: festival, vide-dressing, four pizza, marché artisans, patrim/matrimoine?
-* sitemap.xml
-* imgs compress & crop & -small & -square ?
-
+Watching
+* favicon
+* residence/residences
 
 Content
-* new urls checkup
-* sections text+img
-* hero bgs
 * "plan des chatelets"
 * images cropping
-* logos ?
-* social widgets ?
-* a/img alt/title
-* OSM layer ?
-* posts: festival, vide-dressing, four pizza, marché artisans
-
+* /salle-concert/
+* /salle-spectacles/
+* pdfs backlink
+* "fiche technique" pdf split
+* /residences & pdf translate
 
 Responsive
 * media queries breakpoints are 90% random for now, some cleaning to do
