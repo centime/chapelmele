@@ -1,3 +1,6 @@
+Online at: https://chapelmele.com
+
+
 Todos
 =====
 
@@ -10,6 +13,8 @@ Content
 * images cropping
 * /salle-concert/
 * /salle-spectacles/
+* /spectacle-vivant/ "Résidence artistique pour le spectacle vivant", "Résidence Spectacle Vivant"
+* /plasticiens/ "Résidence artistique pour plasticiens", "Résidence Plasticiens"
 * pdfs backlink
 * "fiche technique" pdf split
 * /residences & pdf translate
