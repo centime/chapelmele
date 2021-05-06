@@ -14345,7 +14345,8 @@ function init(){
 	var $calendar = $('#calendar')[0];
 	// todo: fix: global for dev purposes only
     calendar = new FullCalendar.Calendar($calendar, {
-      initialView: 'dayGridMonth',
+      // initialView: 'dayGridMonth',
+      initialView: 'listMonth',
       locale: 'fr',
 	  eventDidMount: function(ev) {
         console.log(ev.el);
