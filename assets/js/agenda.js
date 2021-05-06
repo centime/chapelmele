@@ -14331,6 +14331,8 @@ var FullCalendar = (function (exports) {
 
 }({}));
 
+// $('#calendar').fullCalendar('changeView', 'agendaDay');
+
 
 function displayAnchoredEvent(){
 	// todo: history.pushState ?
