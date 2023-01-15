@@ -182,5 +182,5 @@ onPage('/agenda/')? $.getScript('/assets/js/agenda.js') + $.getCSS('/assets/css/
 onPage('/admin/')? $.getScript('/assets/js/admin.js'):0;
 editorModeOn()? 
 	onPage('/actualites/')? $.getModule('/assets/js/ghcms-news.js'):
-	onPage('/agenda/')? $.getModule('/assets/js/ghcms-events.js'):
+	/*onPage('/agenda/')? $.getModule('/assets/js/ghcms-events.js'):*/
 	$.getModule('/assets/js/ghcms-edits.js'):0;
