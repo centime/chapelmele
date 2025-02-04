@@ -427,7 +427,8 @@ if (document.domain === "localhost"){
   remote = "//" + ghCMSCredentials.remote;
 }
 
-import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
+// import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
+import {Octokit} from "https://esm.sh/@octokit/core@4.2.2";
 const octokit = new Octokit({ auth: ghCMSCredentials.token });
 
 // todo: restrict hns to h3s
