@@ -437,7 +437,7 @@ var edits, editsSha, editsAsCommited;
 
 // import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
 // https://github.com/octokit/octokit.js/#usage
-import { Octokit } from "https://esm.sh/octokit";
+import {Octokit} from "https://esm.sh/@octokit/core@4.2.2";
 const octokit = new Octokit({ auth: ghCMSCredentials.token });
 
 // todo: restrict hns to h3s
